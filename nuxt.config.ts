@@ -1,13 +1,25 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+
+// GitHub Pages: set base URL to your repo name
+// Change 'proCode_site' if your GitHub repo has a different name
+const isGithubPages = process.env.NITRO_PRESET === 'github-pages'
+
 export default defineNuxtConfig({
   devtools: { enabled: true },
+
+  ssr: true,
+  nitro: {
+    preset: isGithubPages ? 'github-pages' : undefined,
+  },
+
   css: [
     '~/assets/scss/tailwind.scss',
     '~/assets/css/materialdesignicons.min.css',
     '~/assets/libs/@iconscout/unicons/css/line.css',
     '~/assets/css/jarallax.min.css'
-],
+  ],
   app: {
+    baseURL: isGithubPages ? '/proCode_site/' : '/',
     head: {
       title: 'ProCode Solutions',
       titleTemplate: 'ProCode Solutions',
