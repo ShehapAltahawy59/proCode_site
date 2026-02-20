@@ -53,7 +53,7 @@ const clients = [
     {
         image: qvImg,
         name: 'QV',
-        link: 'https://38.242.253.237.sslip.io/QV/'
+        link: 'https://qvstyle.com/'
     },
     {
         image: wizTechImg,
