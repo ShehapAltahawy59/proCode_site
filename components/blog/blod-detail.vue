@@ -78,7 +78,7 @@
                             <li class="inline"><a href=""
                                     class="size-8 inline-flex items-center text-center justify-center text-base font-normal tracking-wide align-middle transition duration-500 ease-in-out border border-gray-100 dark:border-gray-800 rounded-md text-slate-400 hover:border-blue-800 hover:text-white hover:bg-blue-800"><i
                                         class="uil uil-behance align-middle"></i></a></li>
-                            <li class="inline"><a href=""
+                            <li class="inline"><a href="https://www.linkedin.com/company/procode-solutions/" target="_blank"
                                     class="size-8 inline-flex items-center text-center justify-center text-base font-normal tracking-wide align-middle transition duration-500 ease-in-out border border-gray-100 dark:border-gray-800 rounded-md text-slate-400 hover:border-blue-800 hover:text-white hover:bg-blue-800"><i
                                         class="uil uil-linkedin align-middle"></i></a></li>
                             <li class="inline"><a href=""

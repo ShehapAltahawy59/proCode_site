@@ -31,7 +31,7 @@
                         </a>
                     </li>
                     <li class="inline">
-                        <a href="#" target="_blank">
+                        <a href="https://www.linkedin.com/company/procode-solutions/" target="_blank">
                             <span class="login-btn-primary"><span
                                     class="btn btn-sm btn-icon rounded-full bg-blue-800 hover:bg-blue-900 border-blue-800 hover:border-blue-900 text-white"><i
                                         class="uil uil-linkedin"></i></span></span>

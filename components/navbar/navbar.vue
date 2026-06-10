@@ -20,7 +20,7 @@
                                 class="uil uil-whatsapp"></i></a>
                     </li>
                     <li class="inline">
-                        <a href="#" target="_blank"
+                        <a href="https://www.linkedin.com/company/procode-solutions/" target="_blank"
                             class="btn btn-sm btn-icon rounded-full bg-emerald-600 hover:bg-emerald-700 border-emerald-600 hover:border-emerald-700 text-white"><i
                                 class="uil uil-linkedin"></i></a>
                     </li>

@@ -24,7 +24,7 @@
                         <li class="inline"><a :href="`https://wa.me/${whatsappNumber}`" target="_blank"
                                 class="btn btn-icon btn-sm border rounded-md border-slate-700 dark:border-slate-800 hover:border-blue-800 bg-slate-800 dark:bg-gray-900 hover:bg-blue-800 dark:hover:bg-blue-800 text-gray-400 hover:text-white"><i
                                     class="uil uil-whatsapp align-middle" title="WhatsApp"></i></a></li>
-                        <li class="inline"><a href="#" target="_blank"
+                        <li class="inline"><a href="https://www.linkedin.com/company/procode-solutions/" target="_blank"
                                 class="btn btn-icon btn-sm border rounded-md border-slate-700 dark:border-slate-800 hover:border-blue-800 bg-slate-800 dark:bg-gray-900 hover:bg-blue-800 dark:hover:bg-blue-800 text-gray-400 hover:text-white"><i
                                     class="uil uil-linkedin align-middle" title="LinkedIn"></i></a></li>
                     </ul><!--end icon-->
