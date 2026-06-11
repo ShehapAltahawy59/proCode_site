@@ -114,6 +114,8 @@ const translations = {
       projectCategory: 'Category',
       previousProjects: 'Previous Projects',
       projects: [
+        'Madinatak - Multi-Vendor Delivery & Business Platform',
+        'Taqrerk - AI Reports Platform for Samawah Tech',
         'Dog Life AI - Smart Pet Monitoring',
         'LMENUS - Digital Menu Ecosystem',
         'NutriFit - AI Personal Trainer',
@@ -127,43 +129,163 @@ const translations = {
         projectDetail: 'Project Detail',
         projectInfo: 'Project Info',
         location: 'Platform',
-        scopeOfWork: 'Description',
         client: 'Client',
         category: 'Category',
         date: 'Date',
         url: 'Project Link',
         haveQuestion: 'Have Question ? Get in touch!',
         contactUs: 'Contact us',
+        challenge: 'The Challenge',
+        solution: 'Our Solution',
+        keyFeatures: 'Key Features',
+        techStack: 'Technology Stack',
+        outcome: 'The Outcome',
+        status: 'Status',
+        statusLive: 'Live',
+        statusDevelopment: 'In Development',
+        visitWebsite: 'Visit Website',
+        madinatak: {
+          name: 'Madinatak (مدينتك بين إيديك)',
+          location: 'Multi-App Platform (Customer, Delivery & Business Dashboard)',
+          status: 'live',
+          challenge: 'Local cities and areas lack a unified platform connecting businesses, customers, and delivery drivers — businesses struggle with digital menus, online ordering, and reliable delivery tracking, while customers want one app for ordering and support.',
+          solution: 'ProCode built Madinatak, a complete multi-app ecosystem: a Flutter customer app for browsing and ordering from local businesses, a Flutter delivery app with live order tracking, and a Vue.js dashboard where each business manages its own entity, menu, and orders — powered by an AI chatbot, QR-code menus, integrated payments, and AI-based PDF menu extraction.',
+          features: [
+            'Multi-vendor business dashboard (Vue.js) to manage entities, pages, menus and orders',
+            'Customer mobile app (Flutter) to browse, order and track deliveries',
+            'Dedicated delivery driver app with live GPS order tracking',
+            'AI-powered chatbot for customer support',
+            'QR-code digital menus for restaurants',
+            'Integrated payment gateway',
+            'AI-based menu extraction directly from PDF files'
+          ],
+          techStack: ['Flutter', 'Vue.js', 'AI Chatbot', 'AI / LLM (PDF Menu Extraction)', 'Live GPS Tracking', 'Payment Gateway Integration'],
+          outcome: 'Madinatak is ProCode\'s flagship production platform — a complete multi-app ecosystem connecting businesses, customers, and delivery drivers in one city-wide system.',
+          url: 'https://play.google.com/store/search?q=%D9%85%D8%AF%D9%8A%D9%86%D8%AA%D9%83+%D8%A8%D9%8A%D9%86+%D8%A7%D9%8A%D8%AF%D9%8A%D9%83&c=apps&hl=en-US'
+        },
+        taqrerk: {
+          name: 'Taqrerk (تقريرك)',
+          location: 'Web Application (SaaS)',
+          client: 'Samawah Tech (شركة سماوة)',
+          status: 'live',
+          challenge: 'Samawah Tech holds around 30,000 reports for its clients but had no efficient way to search, summarize, or extract insights from them — manual review was slow and costly.',
+          solution: 'ProCode built Taqrerk for Samawah Tech, a SaaS platform that ingests and indexes around 30,000 reports, powered by a Python RAG system and an AI chatbot that can answer questions about the report archive, generate insights, and produce summaries — hosted on Google Cloud with an optimized architecture that keeps running costs very low.',
+          features: [
+            'Ingestion pipeline for ~30,000 reports',
+            'AI chatbot (RAG-based) answering questions across the report archive',
+            'Automated insights generation',
+            'Automated report summarization',
+            'Integrated Meeysar (ميسر) payment gateway',
+            'Optimized cloud infrastructure for very low operating costs'
+          ],
+          techStack: ['.NET', 'PostgreSQL', 'Python (RAG / AI)', 'Google Cloud', 'Meeysar Payment Gateway'],
+          outcome: 'Samawah Tech now offers its clients instant AI-powered access to insights across tens of thousands of reports, at a significantly lower running cost thanks to ProCode\'s optimized architecture.',
+          url: 'https://taqrerk.sa/'
+        },
         dogLifeAI: {
           name: 'Dog Life AI',
           location: 'Mobile & Web Application',
-          scopeOfWork: 'An AI pet care platform that analyzes barks and monitors health using LLM technology. The system provides deep insights into pet behavior and health patterns through advanced machine learning algorithms.'
+          status: 'live',
+          challenge: 'Pet owners often miss early signs of stress, illness, or behavioral changes in their dogs because there is no easy way to interpret barking patterns and daily behavior.',
+          solution: 'ProCode built an AI-powered mobile and web platform that uses LLM-based analysis to interpret bark patterns and behavioral data, giving owners real-time insights into their dog\'s health and emotional state.',
+          features: [
+            'AI-powered bark and sound analysis',
+            'Health and behavior tracking dashboard',
+            'Personalized care recommendations powered by LLM',
+            'Daily activity and routine logging',
+            'Cross-platform mobile and web experience',
+            'Subscription payments via Stripe and Apple Pay'
+          ],
+          techStack: ['Flutter', 'AI / LLM Integration', 'Stripe', 'Apple Pay'],
+          outcome: 'Pet owners gain early warning signs for potential health issues and continuous peace of mind through AI-driven monitoring.',
+          url: 'https://play.google.com/store/apps/details?id=com.procode.doglifeai&hl=en'
         },
         lmenus: {
           name: 'LMENUS',
           location: 'Web & Mobile Application',
-          scopeOfWork: 'A digital menu and management system for restaurants, eliminating paper costs and enabling online ordering. Features cloud-based ordering, real-time menu updates, and comprehensive restaurant management tools.'
+          status: 'live',
+          challenge: 'Restaurants relying on printed menus face high reprinting costs, no real-time price updates, and no online ordering channel.',
+          solution: 'ProCode developed a cloud-based digital menu and ordering ecosystem with a customer-facing app and a real-time management dashboard, deployed on a dedicated VPS.',
+          features: [
+            'QR-code based digital menus',
+            'Real-time menu and price updates',
+            'Online ordering and order management',
+            'Multi-branch restaurant support',
+            'Customer-facing mobile experience',
+            'Order analytics and reporting'
+          ],
+          techStack: ['Python', 'PostgreSQL', 'VPS Deployment'],
+          outcome: 'Restaurant owners eliminated printing costs and gained live control over their menu, pricing, and orders.'
         },
         nutriFit: {
           name: 'NutriFit',
           location: 'Mobile Application',
-          scopeOfWork: 'An AI personal coach providing personalized workout and nutrition plans based on user data. The platform uses intelligent algorithms to create customized fitness experiences tailored to individual goals and preferences.'
+          status: 'live',
+          challenge: 'Generic fitness apps offer one-size-fits-all plans that don\'t adapt to a user\'s goals, progress, or preferences.',
+          solution: 'ProCode built an AI personal trainer app powered by a Python AI agent that generates personalized workout and nutrition plans, adapting as the user progresses.',
+          features: [
+            'AI-generated personalized workout plans',
+            'Smart nutrition and diet recommendations',
+            'Progress tracking and analytics',
+            'Adaptive, goal-based plan adjustments',
+            'Daily reminders and routines',
+            'Subscription payments via Paymob'
+          ],
+          techStack: ['Flutter', 'Python AI Agent', 'Paymob'],
+          outcome: 'Users get a personalized coaching experience that adapts to their progress, like having a trainer in their pocket.',
+          url: 'https://play.google.com/store/apps/details?id=nutrifitai.u3.nutrifitaii&hl=en-US'
         },
         myClinicSystem: {
           name: 'My Clinic System (سيستم عيادتي)',
           location: 'Web & Mobile Application',
-          scopeOfWork: 'A comprehensive management tool for doctors to handle bookings, patient archives, and financial reports. The system streamlines clinic operations with secure patient data management and automated scheduling.'
+          status: 'development',
+          challenge: 'Clinics manage appointments, patient records, and finances manually or across disconnected tools, causing errors and wasted staff time.',
+          solution: 'ProCode is building a bilingual (Arabic/English) web and mobile platform that centralizes bookings, patient archives, and financial reporting for clinics.',
+          features: [
+            'Appointment scheduling and booking management',
+            'Patient records and archive management',
+            'Financial and revenue reports',
+            'Secure patient data management',
+            'Multi-staff access with role permissions',
+            'Full Arabic and English support'
+          ],
+          techStack: ['.NET', 'Vue.js'],
+          outcome: 'Once launched, clinics will streamline daily operations and reduce paperwork and scheduling conflicts.'
         },
         qvStyle: {
           name: 'QVStyle',
           location: 'Web & Mobile Application',
-          scopeOfWork: 'QVStyle is a modern fashion e-commerce platform designed with a mobile-first approach and enhanced web performance. The system includes a powerful admin dashboard for inventory, orders, suppliers, and product management, along with a responsive storefront optimized for speed, scalability, and user experience. Built using .NET backend APIs, PostgreSQL database, and Vue.js frontend, the platform delivers secure authentication, real-time stock tracking, barcode/QR support, and production-ready deployment.',
+          status: 'live',
+          challenge: 'Fashion retailers need a fast, mobile-first storefront alongside a powerful backend to manage inventory, suppliers, and orders at scale.',
+          solution: 'ProCode built QVStyle, a modern fashion e-commerce platform with a mobile-first storefront and a powerful admin dashboard, built on a .NET API, PostgreSQL database, and Vue.js frontend.',
+          features: [
+            'Mobile-first, responsive storefront',
+            'Admin dashboard for inventory, orders, suppliers and products',
+            'Secure authentication',
+            'Real-time stock tracking',
+            'Barcode / QR code support',
+            'Production-ready deployment'
+          ],
+          techStack: ['.NET', 'PostgreSQL', 'Vue.js'],
+          outcome: 'QVStyle is live in market as a scalable, production-ready fashion e-commerce platform.',
           url: 'https://qvstyle.com/'
         },
         turathna: {
           name: 'Turathna',
           location: 'Web & Handheld Application',
-          scopeOfWork: 'Turathna is a comprehensive retail and inventory management system designed to modernize traditional businesses through digital transformation. The platform combines a powerful admin dashboard, real-time stock control, and an integrated POS experience with barcode scanning to streamline daily sales and operations. Built with a scalable .NET backend and Vue.js frontend, Turathna delivers fast performance, secure authentication, and production-ready deployment for both desktop and handheld devices.',
+          status: 'live',
+          challenge: 'Traditional retail businesses lack real-time stock visibility and rely on manual, error-prone sales processes.',
+          solution: 'ProCode built Turathna, a retail and inventory management system combining an admin dashboard, real-time stock control, and an integrated POS with barcode scanning, on a scalable .NET backend with a Vue.js frontend.',
+          features: [
+            'Admin dashboard for full business control',
+            'Real-time inventory and stock control',
+            'Integrated POS with barcode scanning',
+            'Desktop and handheld device support',
+            'Scalable .NET backend',
+            'Secure authentication and production-ready deployment'
+          ],
+          techStack: ['.NET', 'Vue.js'],
+          outcome: 'Turathna is live, helping retail businesses modernize daily sales and operations with real-time accuracy.',
           url: 'https://turathunas.com/'
         }
       }
@@ -317,6 +439,8 @@ const translations = {
       projectCategory: 'فئة',
       previousProjects: 'المشاريع السابقة',
       projects: [
+        'مدينتك بين إيديك - منصة توصيل وإدارة محال متعددة',
+        'تقريرك - منصة تقارير ذكية لشركة سماوة',
         'Dog Life AI - مراقبة الحيوانات الأليفة الذكية',
         'LMENUS - نظام القوائم الرقمية',
         'NutriFit - مدرب شخصي بالذكاء الاصطناعي',
@@ -330,43 +454,163 @@ const translations = {
         projectDetail: 'تفاصيل المشروع',
         projectInfo: 'معلومات المشروع',
         location: 'المنصة',
-        scopeOfWork: 'الوصف',
         client: 'العميل',
         category: 'الفئة',
         date: 'التاريخ',
         url: 'رابط المشروع',
         haveQuestion: 'هل لديك سؤال؟ تواصل معنا!',
         contactUs: 'اتصل بنا',
+        challenge: 'التحدي',
+        solution: 'الحل',
+        keyFeatures: 'أبرز المميزات',
+        techStack: 'التقنيات المستخدمة',
+        outcome: 'النتيجة',
+        status: 'الحالة',
+        statusLive: 'متاح الآن',
+        statusDevelopment: 'قيد التطوير',
+        visitWebsite: 'زيارة الموقع',
+        madinatak: {
+          name: 'مدينتك بين إيديك (Madinatak)',
+          location: 'منصة متعددة التطبيقات (عملاء، توصيل، ولوحة تحكم للمحال)',
+          status: 'live',
+          challenge: 'تفتقر المدن والمناطق المحلية إلى منصة موحدة تربط بين المحال التجارية والعملاء وسائقي التوصيل، حيث تواجه المحال صعوبة في إدارة القوائم الرقمية والطلب أونلاين وتتبع التوصيل، بينما يرغب العملاء في تطبيق واحد للطلب والدعم.',
+          solution: 'بنت ProCode منصة "مدينتك بين إيديك"، وهي نظام متكامل من عدة تطبيقات: تطبيق عملاء بـ Flutter لتصفح وطلب المنتجات من المحال المحلية، وتطبيق توصيل بـ Flutter مع تتبع مباشر للطلبات، ولوحة تحكم بـ Vue.js تتيح لكل محل إدارة كيانه وقوائمه وطلباته، مدعومة بروبوت محادثة ذكي وقوائم QR وبوابة دفع متكاملة ونظام استخراج قوائم بالذكاء الاصطناعي من ملفات PDF.',
+          features: [
+            'لوحة تحكم متعددة المحال (Vue.js) لإدارة الكيانات والصفحات والقوائم والطلبات',
+            'تطبيق عملاء (Flutter) لتصفح وطلب المنتجات ومتابعة التوصيل',
+            'تطبيق سائق توصيل مخصص مع تتبع GPS مباشر للطلبات',
+            'روبوت محادثة ذكي لدعم العملاء',
+            'قوائم رقمية عبر رمز QR للمطاعم',
+            'بوابة دفع متكاملة',
+            'نظام بالذكاء الاصطناعي لاستخراج القوائم من ملفات PDF'
+          ],
+          techStack: ['Flutter', 'Vue.js', 'روبوت محادثة ذكي', 'ذكاء اصطناعي / LLM لاستخراج القوائم', 'تتبع مباشر بـ GPS', 'تكامل بوابات الدفع'],
+          outcome: 'مدينتك بين إيديك هو المنتج الرائد لـ ProCode في مرحلة الإنتاج — نظام متكامل من عدة تطبيقات يربط المحال التجارية والعملاء وسائقي التوصيل في منظومة واحدة على مستوى المدينة.',
+          url: 'https://play.google.com/store/search?q=%D9%85%D8%AF%D9%8A%D9%86%D8%AA%D9%83+%D8%A8%D9%8A%D9%86+%D8%A7%D9%8A%D8%AF%D9%8A%D9%83&c=apps&hl=en-US'
+        },
+        taqrerk: {
+          name: 'تقريرك (Taqrerk)',
+          location: 'تطبيق ويب (SaaS)',
+          client: 'شركة سماوة (Samawah Tech)',
+          status: 'live',
+          challenge: 'تمتلك شركة سماوة حوالي 30,000 تقرير لعملائها، دون وجود وسيلة فعالة للبحث فيها أو تلخيصها أو استخراج رؤى منها، مما جعل المراجعة اليدوية بطيئة ومكلفة.',
+          solution: 'طورت ProCode منصة "تقريرك" لشركة سماوة، وهي منصة SaaS تستوعب وتفهرس حوالي 30,000 تقرير، مدعومة بنظام RAG مبني بـ Python وروبوت محادثة ذكي يجيب على الأسئلة المتعلقة بأرشيف التقارير، ويولّد رؤى وملخصات تلقائية - مستضافة على Google Cloud ببنية محسّنة تجعل تكاليف التشغيل منخفضة جداً.',
+          features: [
+            'نظام استيعاب لحوالي 30,000 تقرير',
+            'روبوت محادثة ذكي (RAG) يجيب عن أسئلة حول أرشيف التقارير',
+            'توليد رؤى تلقائي',
+            'تلخيص تلقائي للتقارير',
+            'تكامل بوابة دفع ميسر (Meeysar)',
+            'بنية تحتية سحابية محسّنة لتكاليف تشغيل منخفضة جداً'
+          ],
+          techStack: ['.NET', 'PostgreSQL', 'Python (RAG / ذكاء اصطناعي)', 'Google Cloud', 'بوابة دفع ميسر'],
+          outcome: 'أصبح لدى عملاء شركة سماوة وصول فوري مدعوم بالذكاء الاصطناعي إلى رؤى من عشرات آلاف التقارير، بتكلفة تشغيل أقل بكثير بفضل البنية المحسّنة من ProCode.',
+          url: 'https://taqrerk.sa/'
+        },
         dogLifeAI: {
           name: 'Dog Life AI',
           location: 'تطبيق موبايل ويب',
-          scopeOfWork: 'منصة رعاية حيوانات أليفة بالذكاء الاصطناعي تحلل النباح وتراقب الصحة باستخدام تكنولوجيا LLM. يوفر النظام رؤى عميقة حول سلوك وصحة الحيوانات الأليفة من خلال خوارزميات التعلم الآلي المتقدمة.'
+          status: 'live',
+          challenge: 'غالباً ما يفوت أصحاب الحيوانات الأليفة العلامات المبكرة للتوتر أو المرض أو التغيرات السلوكية لدى كلابهم، نظراً لصعوبة تفسير أنماط النباح والسلوك اليومي.',
+          solution: 'طورت ProCode منصة ذكاء اصطناعي للموبايل والويب تستخدم تقنية LLM لتحليل أنماط النباح والبيانات السلوكية، لتمنح الملاك رؤى فورية حول صحة كلابهم وحالتهم النفسية.',
+          features: [
+            'تحليل النباح والأصوات بالذكاء الاصطناعي',
+            'لوحة متابعة الصحة والسلوك',
+            'توصيات رعاية مخصصة مدعومة بـ LLM',
+            'تسجيل النشاط اليومي والروتين',
+            'تجربة متكاملة عبر الموبايل والويب',
+            'دفع الاشتراكات عبر Stripe و Apple Pay'
+          ],
+          techStack: ['Flutter', 'تكامل الذكاء الاصطناعي / LLM', 'Stripe', 'Apple Pay'],
+          outcome: 'يحصل أصحاب الحيوانات الأليفة على إنذار مبكر لأي مشاكل صحية محتملة وراحة بال مستمرة بفضل المراقبة الذكية.',
+          url: 'https://play.google.com/store/apps/details?id=com.procode.doglifeai&hl=en'
         },
         lmenus: {
           name: 'LMENUS',
           location: 'تطبيق ويب وموبايل',
-          scopeOfWork: 'نظام قوائم وإدارة رقمي للمطاعم، يلغي تكاليف الورق ويمكن الطلب عبر الإنترنت. يتميز بالطلب المستند إلى السحابة وتحديثات القوائم في الوقت الفعلي وأدوات إدارة المطاعم الشاملة.'
+          status: 'live',
+          challenge: 'تواجه المطاعم التي تعتمد على القوائم المطبوعة تكاليف إعادة طباعة مرتفعة، وعدم القدرة على تحديث الأسعار فورياً، وغياب قناة للطلب أونلاين.',
+          solution: 'طورت ProCode نظام قوائم وطلبات رقمي يعمل على السحابة، يضم تطبيقاً للعملاء ولوحة تحكم إدارية فورية، تم نشره على خادم VPS مخصص.',
+          features: [
+            'قوائم رقمية عبر رمز QR',
+            'تحديث القوائم والأسعار فورياً',
+            'إدارة الطلبات والطلب أونلاين',
+            'دعم الفروع المتعددة للمطاعم',
+            'تجربة استخدام سهلة للعملاء عبر الموبايل',
+            'تقارير وتحليلات للطلبات'
+          ],
+          techStack: ['Python', 'PostgreSQL', 'نشر على VPS'],
+          outcome: 'تخلص أصحاب المطاعم من تكاليف الطباعة وأصبح لديهم تحكم مباشر في القائمة والأسعار والطلبات.'
         },
         nutriFit: {
           name: 'NutriFit',
           location: 'تطبيق موبايل',
-          scopeOfWork: 'مدرب شخصي بالذكاء الاصطناعي يقدم خطط تمرين وتغذية مخصصة بناءً على بيانات المستخدم. تستخدم المنصة خوارزميات ذكية لإنشاء تجارب لياقة مخصصة مصممة خصيصاً للأهداف والتفضيلات الفردية.'
+          status: 'live',
+          challenge: 'تقدم تطبيقات اللياقة العامة خططاً موحدة لا تتكيف مع أهداف المستخدم أو تقدمه أو تفضيلاته.',
+          solution: 'بنت ProCode تطبيق مدرب شخصي بالذكاء الاصطناعي مدعوماً بوكيل ذكاء اصطناعي مبني بـ Python، يولّد خطط تمرين وتغذية مخصصة تتكيف مع تقدم المستخدم.',
+          features: [
+            'خطط تمرين مخصصة يولدها الذكاء الاصطناعي',
+            'توصيات غذائية ذكية',
+            'تتبع التقدم والتحليلات',
+            'تعديل الخطط تلقائياً حسب الأهداف',
+            'تذكيرات وروتين يومي',
+            'دفع الاشتراكات عبر Paymob'
+          ],
+          techStack: ['Flutter', 'وكيل ذكاء اصطناعي بـ Python', 'Paymob'],
+          outcome: 'يحصل المستخدمون على تجربة تدريب مخصصة تتكيف مع تقدمهم، كأن لديهم مدرباً شخصياً في جيبهم.',
+          url: 'https://play.google.com/store/apps/details?id=nutrifitai.u3.nutrifitaii&hl=en-US'
         },
         myClinicSystem: {
           name: 'My Clinic System (سيستم عيادتي)',
           location: 'تطبيق ويب وموبايل',
-          scopeOfWork: 'أداة إدارة شاملة للأطباء للتعامل مع الحجوزات وأرشيفات المرضى والتقارير المالية. يبسط النظام عمليات العيادة مع إدارة آمنة لبيانات المرضى والجدولة الآلية.'
+          status: 'development',
+          challenge: 'تدير العيادات الحجوزات وسجلات المرضى والتقارير المالية يدوياً أو عبر أدوات منفصلة، مما يسبب أخطاء وإهداراً لوقت الموظفين.',
+          solution: 'تعمل ProCode على بناء منصة ويب وموبايل ثنائية اللغة (عربي/إنجليزي) تجمع الحجوزات وأرشيف المرضى والتقارير المالية في مكان واحد.',
+          features: [
+            'جدولة وإدارة الحجوزات',
+            'إدارة سجلات وأرشيف المرضى',
+            'تقارير مالية وإيرادات',
+            'إدارة آمنة لبيانات المرضى',
+            'صلاحيات متعددة لفريق العيادة',
+            'دعم كامل للغتين العربية والإنجليزية'
+          ],
+          techStack: ['.NET', 'Vue.js'],
+          outcome: 'بعد الإطلاق، ستتمكن العيادات من تبسيط عملياتها اليومية وتقليل الأعمال الورقية وتعارض المواعيد.'
         },
         qvStyle: {
           name: 'QVStyle',
           location: 'تطبيق ويب وموبايل',
-          scopeOfWork: 'منصة تجارة إلكترونية للأزياء مصممة بنهج يركز على الهاتف المحمول وأداء ويب محسن. يتضمن النظام لوحة تحكم قوية للمخزون والطلبات والموردين وإدارة المنتجات، إلى جانب واجهة متجر سريعة الاستجابة محسنة للسرعة وقابلية التوسع وتجربة المستخدم. تم بناؤه باستخدام واجهات برمجة تطبيقات .NET وقاعدة بيانات PostgreSQL وواجهة Vue.js، وتوفر المنصة مصادقة آمنة وتتبع المخزون في الوقت الفعلي ودعم الباركود/QR ونشر جاهز للإنتاج.',
+          status: 'live',
+          challenge: 'تحتاج متاجر الأزياء إلى واجهة سريعة تركز على الموبايل، إلى جانب نظام خلفي قوي لإدارة المخزون والموردين والطلبات على نطاق واسع.',
+          solution: 'بنت ProCode منصة QVStyle، وهي منصة تجارة إلكترونية حديثة للأزياء بواجهة متجر تركز على الموبايل ولوحة تحكم إدارية قوية، مبنية على واجهات برمجة تطبيقات .NET وقاعدة بيانات PostgreSQL وواجهة Vue.js.',
+          features: [
+            'واجهة متجر متجاوبة تركز على الموبايل',
+            'لوحة تحكم لإدارة المخزون والطلبات والموردين والمنتجات',
+            'مصادقة آمنة',
+            'تتبع المخزون في الوقت الفعلي',
+            'دعم الباركود ورمز QR',
+            'نشر جاهز للإنتاج'
+          ],
+          techStack: ['.NET', 'PostgreSQL', 'Vue.js'],
+          outcome: 'QVStyle متاح الآن في السوق كمنصة تجارة إلكترونية للأزياء جاهزة للإنتاج وقابلة للتوسع.',
           url: 'https://qvstyle.com/'
         },
         turathna: {
           name: 'تراثنا',
           location: 'تطبيق ويب وأجهزة محمولة',
-          scopeOfWork: 'نظام إدارة تجزئة ومخزون شامل مصمم لتحديث الأعمال التقليدية من خلال التحول الرقمي. تجمع المنصة بين لوحة تحكم إدارية قوية ، وتحكم في المخزون في الوقت الفعلي ، وتجربة نقاط بيع متكاملة مع مسح الباركود لتبسيط المبيعات والعمليات اليومية. مبني بنظام backend .NET قابل للتوسع وواجهة Vue.js الأمامية ، يوفر Turathna أداءً سريعًا ومصادقة آمنة ونشرًا جاهزًا للإنتاج لكل من أجهزة الكمبيوتر المكتبية والأجهزة المحمولة.',
+          status: 'live',
+          challenge: 'تفتقر الأعمال التجارية التقليدية إلى رؤية فورية للمخزون وتعتمد على عمليات بيع يدوية عرضة للأخطاء.',
+          solution: 'بنت ProCode نظام تراثنا، نظام إدارة تجزئة ومخزون يجمع بين لوحة تحكم إدارية، وتحكم في المخزون في الوقت الفعلي، ونظام نقاط بيع متكامل مع مسح الباركود، على نظام خلفي قابل للتوسع بـ .NET وواجهة Vue.js.',
+          features: [
+            'لوحة تحكم للتحكم الكامل في الأعمال',
+            'تحكم في المخزون في الوقت الفعلي',
+            'نظام نقاط بيع متكامل مع مسح الباركود',
+            'دعم أجهزة سطح المكتب والأجهزة المحمولة',
+            'نظام خلفي قابل للتوسع بـ .NET',
+            'مصادقة آمنة ونشر جاهز للإنتاج'
+          ],
+          techStack: ['.NET', 'Vue.js'],
+          outcome: 'تراثنا متاح الآن، ويساعد الشركات التجارية على تحديث عمليات البيع اليومية بدقة فورية.',
           url: 'https://turathunas.com/'
         }
       }

@@ -68,6 +68,8 @@
 
 <script>
 // Using placeholder images - replace with actual project images when available
+import madinatakImg from '@/assets/images/madinatak/madinatak-1.jpg';
+import taqrerkImg from '@/assets/images/taqrerk/taqrerk-1.png';
 import dogLifeAIImg from '@/assets/images/dog life/photo_2026-02-12_12-05-33.jpg';
 import lmenusImg from '@/assets/images/Lmenus/photo_2026-02-12_12-05-38.jpg';
 import nutriFitImg from '@/assets/images/nutrifit/photo_2026-02-12_12-05-29.jpg';
@@ -101,6 +103,16 @@ export default {
             // Add currentLang as dependency to force recomputation when language changes
             const lang = currentLang.value
             return [
+                {
+                    id: 'madinatak',
+                    image: madinatakImg,
+                    name: t('portfolio.projectDetails.madinatak.name'),
+                },
+                {
+                    id: 'taqrerk',
+                    image: taqrerkImg,
+                    name: t('portfolio.projectDetails.taqrerk.name'),
+                },
                 {
                     id: 'dog-life-ai',
                     image: dogLifeAIImg,

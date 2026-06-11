@@ -18,20 +18,60 @@
                         <div class="grid lg:grid-cols-12 grid-cols-1 gap-[30px]">
                             <div class="lg:col-span-12">
                                 <div class="work-details">
-                                    <h4
-                                        class="text-xl font-medium mb-3 border-b border-gray-100 dark:border-gray-700 pb-3 dark:text-white">
-                                        {{ t('portfolio.projectDetails.projectDetail') }} :
-                                    </h4>
-                                    <p class="text-slate-400 dark:text-slate-300 mb-4">{{ projectDescription }}</p>
+                                    <div class="flex items-center justify-between flex-wrap gap-2 border-b border-gray-100 dark:border-gray-700 pb-3 mb-3">
+                                        <h4 class="text-xl font-medium dark:text-white">
+                                            {{ projectName }}
+                                        </h4>
+                                        <span v-if="projectStatus"
+                                            :class="projectStatus === 'live'
+                                                ? 'bg-emerald-50 text-emerald-600 dark:bg-emerald-900/40 dark:text-emerald-400'
+                                                : 'bg-amber-50 text-amber-600 dark:bg-amber-900/40 dark:text-amber-400'"
+                                            class="text-xs font-medium px-3 py-1 rounded-full">
+                                            {{ projectStatus === 'live'
+                                                ? t('portfolio.projectDetails.statusLive')
+                                                : t('portfolio.projectDetails.statusDevelopment') }}
+                                        </span>
+                                    </div>
 
-                                    <div v-if="scopeOfWork" class="mt-6">
+                                    <div v-if="projectChallenge" class="mb-6">
+                                        <h5 class="text-lg font-medium mb-2 dark:text-white">{{
+                                            t('portfolio.projectDetails.challenge') }}</h5>
+                                        <p class="text-slate-400 dark:text-slate-300">{{ projectChallenge }}</p>
+                                    </div>
+
+                                    <div v-if="projectSolution" class="mb-6">
+                                        <h5 class="text-lg font-medium mb-2 dark:text-white">{{
+                                            t('portfolio.projectDetails.solution') }}</h5>
+                                        <p class="text-slate-400 dark:text-slate-300">{{ projectSolution }}</p>
+                                    </div>
+
+                                    <div v-if="projectFeatures.length" class="mb-6">
                                         <h5 class="text-lg font-medium mb-3 dark:text-white">{{
-                                            t('portfolio.projectDetails.scopeOfWork') }}:</h5>
-                                        <ul v-if="Array.isArray(scopeOfWork)"
-                                            class="list-disc list-inside space-y-2 text-slate-400 dark:text-slate-300">
-                                            <li v-for="(item, index) in scopeOfWork" :key="index">{{ item }}</li>
+                                            t('portfolio.projectDetails.keyFeatures') }}</h5>
+                                        <ul class="grid sm:grid-cols-2 grid-cols-1 gap-2">
+                                            <li v-for="(item, index) in projectFeatures" :key="index"
+                                                class="flex items-start text-slate-400 dark:text-slate-300">
+                                                <i class="uil uil-check-circle text-blue-800 text-lg me-2 mt-0.5 flex-shrink-0"></i>
+                                                <span>{{ item }}</span>
+                                            </li>
                                         </ul>
-                                        <p v-else class="text-slate-400 dark:text-slate-300">{{ scopeOfWork }}</p>
+                                    </div>
+
+                                    <div v-if="projectTechStack.length" class="mb-6">
+                                        <h5 class="text-lg font-medium mb-3 dark:text-white">{{
+                                            t('portfolio.projectDetails.techStack') }}</h5>
+                                        <div class="flex flex-wrap gap-2">
+                                            <span v-for="(tech, index) in projectTechStack" :key="index"
+                                                class="text-sm font-medium px-3 py-1 rounded-full bg-blue-800/10 text-blue-800 dark:bg-blue-400/10 dark:text-blue-400">
+                                                {{ tech }}
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div v-if="projectOutcome" class="mb-6">
+                                        <h5 class="text-lg font-medium mb-2 dark:text-white">{{
+                                            t('portfolio.projectDetails.outcome') }}</h5>
+                                        <p class="text-slate-400 dark:text-slate-300">{{ projectOutcome }}</p>
                                     </div>
                                 </div>
                             </div><!--end col-->
@@ -47,6 +87,14 @@
                                             t('portfolio.projectDetails.location') }} :</dt>
                                         <dd class="md:col-span-8 col-span-7 mt-2 text-slate-400 dark:text-slate-300">{{
                                             projectLocation }}</dd>
+
+                                        <dt v-if="projectStatus" class="md:col-span-4 col-span-5 mt-2 dark:text-white">{{
+                                            t('portfolio.projectDetails.status') }} :</dt>
+                                        <dd v-if="projectStatus"
+                                            class="md:col-span-8 col-span-7 mt-2 text-slate-400 dark:text-slate-300">{{
+                                                projectStatus === 'live'
+                                                    ? t('portfolio.projectDetails.statusLive')
+                                                    : t('portfolio.projectDetails.statusDevelopment') }}</dd>
 
                                         <dt v-if="projectClient" class="md:col-span-4 col-span-5 mt-2 dark:text-white">{{
                                             t('portfolio.projectDetails.client') }} :</dt>
@@ -75,6 +123,11 @@
                                                     projectUrl }}</a>
                                         </dd>
                                     </dl>
+
+                                    <a v-if="projectUrl" :href="projectUrl" target="_blank"
+                                        class="mt-5 py-2 px-5 inline-block font-normal tracking-wide border align-middle transition duration-500 ease-in-out text-base text-center bg-blue-800 hover:bg-blue-900 border-blue-800 hover:border-blue-900 text-white rounded-md">
+                                        <i class="uil uil-external-link-alt align-middle me-2"></i>{{ t('portfolio.projectDetails.visitWebsite') }}
+                                    </a>
                                 </div>
                             </div><!--end col-->
                         </div><!--end grid-->
@@ -115,6 +168,22 @@ import VueEasyLightbox from 'vue-easy-lightbox'
 import myClinicSystemImg from '@/assets/images/3yadty/photo_2026-02-12_12-05-25.jpg';
 import nutriFitImg from '@/assets/images/nutrifit/photo_2026-02-12_12-05-29.jpg';
 import lmenusImg from '@/assets/images/Lmenus/photo_2026-02-12_12-05-38.jpg';
+import madinatakImg1 from '@/assets/images/madinatak/madinatak-1.jpg';
+import madinatakImg2 from '@/assets/images/madinatak/madinatak-2.jpg';
+import madinatakImg3 from '@/assets/images/madinatak/madinatak-3.jpg';
+import madinatakImg4 from '@/assets/images/madinatak/madinatak-4.jpg';
+
+const madinatakImages = [madinatakImg1, madinatakImg2, madinatakImg3, madinatakImg4];
+
+import taqrerkImg1 from '@/assets/images/taqrerk/taqrerk-1.png';
+import taqrerkImg2 from '@/assets/images/taqrerk/taqrerk-2.png';
+import taqrerkImg3 from '@/assets/images/taqrerk/taqrerk-3.png';
+import taqrerkImg4 from '@/assets/images/taqrerk/taqrerk-4.png';
+import taqrerkImg5 from '@/assets/images/taqrerk/taqrerk-5.png';
+import taqrerkImg6 from '@/assets/images/taqrerk/taqrerk-6.png';
+
+const taqrerkImages = [taqrerkImg1, taqrerkImg2, taqrerkImg3, taqrerkImg4, taqrerkImg5, taqrerkImg6];
+
 import dogLifeAIImg from '@/assets/images/dog life/photo_2026-02-12_12-05-33.jpg';
 import qvStyleImg1 from '@/assets/images/qvstyle/Screenshot 2026-02-12 134838.png';
 import qvStyleImg2 from '@/assets/images/qvstyle/Screenshot 2026-02-12 134845.png';
@@ -249,12 +318,46 @@ export default {
 
         const projectData = computed(() => {
             const lang = currentLang.value
+            if (projectId.value === 'madinatak') {
+                return {
+                    name: t('portfolio.projectDetails.madinatak.name'),
+                    location: t('portfolio.projectDetails.madinatak.location'),
+                    status: t('portfolio.projectDetails.madinatak.status'),
+                    challenge: t('portfolio.projectDetails.madinatak.challenge'),
+                    solution: t('portfolio.projectDetails.madinatak.solution'),
+                    features: t('portfolio.projectDetails.madinatak.features'),
+                    techStack: t('portfolio.projectDetails.madinatak.techStack'),
+                    outcome: t('portfolio.projectDetails.madinatak.outcome'),
+                    url: t('portfolio.projectDetails.madinatak.url'),
+                    images: madinatakImages
+                }
+            }
+            if (projectId.value === 'taqrerk') {
+                return {
+                    name: t('portfolio.projectDetails.taqrerk.name'),
+                    location: t('portfolio.projectDetails.taqrerk.location'),
+                    client: t('portfolio.projectDetails.taqrerk.client'),
+                    status: t('portfolio.projectDetails.taqrerk.status'),
+                    challenge: t('portfolio.projectDetails.taqrerk.challenge'),
+                    solution: t('portfolio.projectDetails.taqrerk.solution'),
+                    features: t('portfolio.projectDetails.taqrerk.features'),
+                    techStack: t('portfolio.projectDetails.taqrerk.techStack'),
+                    outcome: t('portfolio.projectDetails.taqrerk.outcome'),
+                    url: t('portfolio.projectDetails.taqrerk.url'),
+                    images: taqrerkImages
+                }
+            }
             if (projectId.value === 'dog-life-ai') {
                 return {
                     name: t('portfolio.projectDetails.dogLifeAI.name'),
                     location: t('portfolio.projectDetails.dogLifeAI.location'),
-                    description: t('portfolio.projectDetails.dogLifeAI.scopeOfWork'),
-                    scopeOfWork: t('portfolio.projectDetails.dogLifeAI.scopeOfWork'),
+                    status: t('portfolio.projectDetails.dogLifeAI.status'),
+                    challenge: t('portfolio.projectDetails.dogLifeAI.challenge'),
+                    solution: t('portfolio.projectDetails.dogLifeAI.solution'),
+                    features: t('portfolio.projectDetails.dogLifeAI.features'),
+                    techStack: t('portfolio.projectDetails.dogLifeAI.techStack'),
+                    outcome: t('portfolio.projectDetails.dogLifeAI.outcome'),
+                    url: t('portfolio.projectDetails.dogLifeAI.url'),
                     images: [dogLifeAIImg]
                 }
             }
@@ -262,8 +365,12 @@ export default {
                 return {
                     name: t('portfolio.projectDetails.lmenus.name'),
                     location: t('portfolio.projectDetails.lmenus.location'),
-                    description: t('portfolio.projectDetails.lmenus.scopeOfWork'),
-                    scopeOfWork: t('portfolio.projectDetails.lmenus.scopeOfWork'),
+                    status: t('portfolio.projectDetails.lmenus.status'),
+                    challenge: t('portfolio.projectDetails.lmenus.challenge'),
+                    solution: t('portfolio.projectDetails.lmenus.solution'),
+                    features: t('portfolio.projectDetails.lmenus.features'),
+                    techStack: t('portfolio.projectDetails.lmenus.techStack'),
+                    outcome: t('portfolio.projectDetails.lmenus.outcome'),
                     images: [lmenusImg]
                 }
             }
@@ -271,8 +378,13 @@ export default {
                 return {
                     name: t('portfolio.projectDetails.nutriFit.name'),
                     location: t('portfolio.projectDetails.nutriFit.location'),
-                    description: t('portfolio.projectDetails.nutriFit.scopeOfWork'),
-                    scopeOfWork: t('portfolio.projectDetails.nutriFit.scopeOfWork'),
+                    status: t('portfolio.projectDetails.nutriFit.status'),
+                    challenge: t('portfolio.projectDetails.nutriFit.challenge'),
+                    solution: t('portfolio.projectDetails.nutriFit.solution'),
+                    features: t('portfolio.projectDetails.nutriFit.features'),
+                    techStack: t('portfolio.projectDetails.nutriFit.techStack'),
+                    outcome: t('portfolio.projectDetails.nutriFit.outcome'),
+                    url: t('portfolio.projectDetails.nutriFit.url'),
                     images: [nutriFitImg]
                 }
             }
@@ -280,8 +392,12 @@ export default {
                 return {
                     name: t('portfolio.projectDetails.myClinicSystem.name'),
                     location: t('portfolio.projectDetails.myClinicSystem.location'),
-                    description: t('portfolio.projectDetails.myClinicSystem.scopeOfWork'),
-                    scopeOfWork: t('portfolio.projectDetails.myClinicSystem.scopeOfWork'),
+                    status: t('portfolio.projectDetails.myClinicSystem.status'),
+                    challenge: t('portfolio.projectDetails.myClinicSystem.challenge'),
+                    solution: t('portfolio.projectDetails.myClinicSystem.solution'),
+                    features: t('portfolio.projectDetails.myClinicSystem.features'),
+                    techStack: t('portfolio.projectDetails.myClinicSystem.techStack'),
+                    outcome: t('portfolio.projectDetails.myClinicSystem.outcome'),
                     images: [myClinicSystemImg]
                 }
             }
@@ -289,8 +405,12 @@ export default {
                 return {
                     name: t('portfolio.projectDetails.qvStyle.name'),
                     location: t('portfolio.projectDetails.qvStyle.location'),
-                    description: t('portfolio.projectDetails.qvStyle.scopeOfWork'),
-                    scopeOfWork: t('portfolio.projectDetails.qvStyle.scopeOfWork'),
+                    status: t('portfolio.projectDetails.qvStyle.status'),
+                    challenge: t('portfolio.projectDetails.qvStyle.challenge'),
+                    solution: t('portfolio.projectDetails.qvStyle.solution'),
+                    features: t('portfolio.projectDetails.qvStyle.features'),
+                    techStack: t('portfolio.projectDetails.qvStyle.techStack'),
+                    outcome: t('portfolio.projectDetails.qvStyle.outcome'),
                     url: t('portfolio.projectDetails.qvStyle.url'),
                     images: qvStyleImages
                 }
@@ -299,8 +419,12 @@ export default {
                 return {
                     name: t('portfolio.projectDetails.turathna.name'),
                     location: t('portfolio.projectDetails.turathna.location'),
-                    description: t('portfolio.projectDetails.turathna.scopeOfWork'),
-                    scopeOfWork: t('portfolio.projectDetails.turathna.scopeOfWork'),
+                    status: t('portfolio.projectDetails.turathna.status'),
+                    challenge: t('portfolio.projectDetails.turathna.challenge'),
+                    solution: t('portfolio.projectDetails.turathna.solution'),
+                    features: t('portfolio.projectDetails.turathna.features'),
+                    techStack: t('portfolio.projectDetails.turathna.techStack'),
+                    outcome: t('portfolio.projectDetails.turathna.outcome'),
                     url: t('portfolio.projectDetails.turathna.url'),
                     images: turathnaImages
                 }
@@ -310,8 +434,18 @@ export default {
 
         const projectName = computed(() => projectData.value?.name || '')
         const projectLocation = computed(() => projectData.value?.location || '')
-        const projectDescription = computed(() => projectData.value?.description || '')
-        const scopeOfWork = computed(() => projectData.value?.scopeOfWork || [])
+        const projectStatus = computed(() => projectData.value?.status || null)
+        const projectChallenge = computed(() => projectData.value?.challenge || '')
+        const projectSolution = computed(() => projectData.value?.solution || '')
+        const projectFeatures = computed(() => {
+            const features = projectData.value?.features
+            return Array.isArray(features) ? features : []
+        })
+        const projectTechStack = computed(() => {
+            const techStack = projectData.value?.techStack
+            return Array.isArray(techStack) ? techStack : []
+        })
+        const projectOutcome = computed(() => projectData.value?.outcome || '')
         const projectImages = computed(() => projectData.value?.images || [])
         const projectClient = computed(() => projectData.value?.client || null)
         const projectCategory = computed(() => projectData.value?.category || null)
@@ -332,12 +466,17 @@ export default {
             t,
             projectName,
             projectLocation,
-            projectDescription,
-            scopeOfWork,
+            projectStatus,
+            projectChallenge,
+            projectSolution,
+            projectFeatures,
+            projectTechStack,
+            projectOutcome,
             projectImages,
             projectClient,
             projectCategory,
             projectDate,
+            projectUrl,
             isImageLightboxOpen,
             lightboxImages,
             lightboxIndex,
