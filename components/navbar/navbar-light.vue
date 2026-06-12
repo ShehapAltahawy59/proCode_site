@@ -94,6 +94,9 @@
                     <li class="nav-item portfolio">
                         <a class="nav-link" href="#portfolio" @click="closeMobileMenu">{{ t('nav.portfolio') }}</a>
                     </li>
+                    <li class="nav-item reviews">
+                        <a class="nav-link" href="#reviews" @click="closeMobileMenu">{{ t('nav.reviews') }}</a>
+                    </li>
                     <li class="nav-item clients">
                         <a class="nav-link" href="#clients" @click="closeMobileMenu">{{ t('nav.review') }}</a>
                     </li>

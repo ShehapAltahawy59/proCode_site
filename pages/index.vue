@@ -37,6 +37,7 @@
   <about />
   <services ref="servicesRef" />
   <portfolio />
+  <reviews />
   <client />
   <!-- <suppliers /> -->
   <getintouch />
@@ -50,6 +51,7 @@ import about from '@/components/about.vue';
 import services from '@/components/services.vue';
 import portfolio from '@/components/portfolio/portfolio.vue';
 import client from '@/components/client.vue';
+import reviews from '@/components/reviews.vue';
 import suppliers from '@/components/suppliers.vue';
 import getintouch from '@/components/getInTouch.vue'
 import fooTer from '@/components/footer.vue';

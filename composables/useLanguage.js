@@ -12,6 +12,7 @@ const translations = {
       about: 'About us',
       services: 'Services',
       portfolio: 'Projects',
+      reviews: 'Reviews',
       review: 'Clients',
       team: 'Our Team',
       pricing: 'Pricing',
@@ -317,6 +318,12 @@ const translations = {
       subtitle: 'Trusted Partners',
       description: 'We are proud to work with leading companies and organizations across various industries.'
     },
+    reviews: {
+      title: 'Client Reviews',
+      subtitle: 'What Our Clients Say',
+      description: 'Real, verified reviews from our clients on Mostaql and Facebook.',
+      viewReview: 'View Review'
+    },
     suppliersForm: {
       title: 'Supplier Registration',
       subtitle: 'Join our network of trusted suppliers',
@@ -337,6 +344,7 @@ const translations = {
       about: 'من نحن',
       services: 'الخدمات',
       portfolio: 'المشاريع',
+      reviews: 'التقييمات',
       review: 'العملاء',
       team: 'فريقنا',
       pricing: 'الأسعار',
@@ -641,6 +649,12 @@ const translations = {
       title: 'عملاؤنا',
       subtitle: 'شركاؤنا الموثوقون',
       description: 'نفتخر بالعمل مع الشركات والمنظمات الرائدة في مختلف الصناعات.'
+    },
+    reviews: {
+      title: 'تقييمات العملاء',
+      subtitle: 'ماذا يقول عملاؤنا',
+      description: 'تقييمات حقيقية وموثقة من عملائنا على مستقل وفيسبوك.',
+      viewReview: 'عرض التقييم'
     },
     suppliersForm: {
       title: 'تسجيل الموردين',
