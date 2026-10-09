@@ -28,6 +28,8 @@ export default defineNuxtConfig({
         },
         { hid: 'description', name: 'description', content: 'ProCode Solutions - Redefining the Future through Intelligent Code. We build software and AI-driven ecosystems that transform businesses.' },
         { name: 'format-detection', content: 'telephone=no' },
+        // Proves to Meta that this domain (and its subdomains, such as wavelink.) is ours
+        { name: 'facebook-domain-verification', content: 'l9bwltn4j42qpdcp0alwd0tya9fczc' },
         // Open Graph tags for social media & search engines
         { property: 'og:title', content: 'ProCode Solutions' },
         { property: 'og:description', content: 'Redefining the Future through Intelligent Code. We build software and AI-driven ecosystems that transform businesses.' },
