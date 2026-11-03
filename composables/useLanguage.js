@@ -126,7 +126,8 @@ const translations = {
         'Customized LLM Analysis Tools',
         'QVStyle - Fashion E-commerce Platform',
         'Turathna - Retail & Inventory System',
-        'Herd Tracker - Livestock & Farm Management App'
+        'Herd Tracker - Livestock & Farm Management App',
+        'Kivo - Programming Learning App for Secondary Students'
       ],
       projectDetails: {
         projectDetail: 'Project Detail',
@@ -308,6 +309,24 @@ const translations = {
           ],
           outcome: 'Farm owners keep their herd records and farm accounts together in one app, making daily follow-up easier and the data of every animal a tap away.',
           url: 'https://play.google.com/store/apps/details?id=com.procode.elan3am'
+        },
+        kivo: {
+          name: 'Kivo',
+          location: 'Mobile Application (Android)',
+          status: 'live',
+          challenge: 'First-year secondary students in Egypt find the new programming subject hard to follow from the textbook alone, and they need one place to watch lessons, read notes and practise before exams.',
+          solution: 'ProCode built Kivo, an Arabic learning app for the first-year secondary programming curriculum that brings together video lessons by specialist teachers, in-app notes and PDFs, and self-tests whose questions keep changing so every review is different.',
+          features: [
+            'Short video lessons for every unit of the curriculum, by specialist teachers',
+            'Notes and PDF resources that open inside the app without downloading',
+            'Self-tests with multiple-choice and true/false questions',
+            'A question bank that keeps updating, so exams do not repeat',
+            'Competitive tests and competitions between students',
+            'An AI assistant that answers questions about the lessons and the code',
+            'Dark mode, and notifications when new lessons are added'
+          ],
+          outcome: 'Students get the whole programming course, from the lesson to the test, in one app on their phone, and Kivo is ready to grow to more grades and subjects.',
+          url: 'https://play.google.com/store/apps/details?id=com.kivoteam.kivoapp'
         },
         wavelink: {
           name: 'WaveLink',
@@ -527,7 +546,8 @@ const translations = {
         'أدوات تحليل LLM مخصصة',
         'QVStyle - منصة تجارة إلكترونية للأزياء',
         'Turathna - نظام إدارة التجزئة والمخزون',
-        'متابعة القطيع - تطبيق إدارة الماشية والمزرعة'
+        'متابعة القطيع - تطبيق إدارة الماشية والمزرعة',
+        'كيفو - تطبيق تعليم البرمجة لطلاب الثانوي'
       ],
       projectDetails: {
         projectDetail: 'تفاصيل المشروع',
@@ -709,6 +729,24 @@ const translations = {
           ],
           outcome: 'يجمع أصحاب المزارع سجلات القطيع وحسابات المزرعة في تطبيق واحد، فتسهل المتابعة اليومية وتصبح بيانات كل حيوان في متناول اليد.',
           url: 'https://play.google.com/store/apps/details?id=com.procode.elan3am'
+        },
+        kivo: {
+          name: 'كيفو (Kivo)',
+          location: 'تطبيق موبايل (أندرويد)',
+          status: 'live',
+          challenge: 'طلاب الصف الأول الثانوي في مصر يجدون مادة البرمجة الجديدة صعبة من الكتاب وحده، ويحتاجون مكانًا واحدًا يشاهدون فيه الشرح ويقرؤون المذكرات ويتدربون قبل الامتحانات.',
+          solution: 'بنت ProCode تطبيق كيفو، تطبيق تعليمي بالعربية لمنهج البرمجة للصف الأول الثانوي، يجمع فيديوهات شرح من مدرسين متخصصين، ومذكرات وملفات PDF داخل التطبيق، واختبارات ذاتية تتجدد أسئلتها باستمرار فتختلف كل مراجعة عن سابقتها.',
+          features: [
+            'فيديوهات شرح مبسطة لكل وحدة من المنهج يقدمها مدرسون متخصصون',
+            'مذكرات وملفات PDF تُفتح داخل التطبيق بدون تحميل',
+            'اختبارات ذاتية بأسئلة اختيار من متعدد وصح أو خطأ',
+            'بنك أسئلة يتجدد باستمرار حتى لا تتكرر الامتحانات',
+            'اختبارات تنافسية ومسابقات بين الطلاب',
+            'مساعد ذكي يجيب عن الأسئلة الخاصة بالدروس والكود',
+            'وضع ليلي، وإشعارات عند إضافة دروس جديدة'
+          ],
+          outcome: 'يحصل الطالب على مادة البرمجة كاملة، من الشرح حتى الاختبار، في تطبيق واحد على موبايله، وكيفو جاهز للتوسع لمراحل ومواد أخرى.',
+          url: 'https://play.google.com/store/apps/details?id=com.kivoteam.kivoapp'
         },
         wavelink: {
           name: 'ويف لينك',

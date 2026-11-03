@@ -76,6 +76,7 @@ import nutriFitImg from '@/assets/images/nutrifit/photo_2026-02-12_12-05-29.jpg'
 import myClinicSystemImg from '@/assets/images/3yadty/photo_2026-02-12_12-05-25.jpg';
 import qvStyleImg from '@/assets/images/qvstyle/Screenshot 2026-02-12 134838.png';
 import herdTrackerImg from '@/assets/images/elan3am/elan3am-cover.jpg';
+import kivoImg from '@/assets/images/kivo-app/kivo-cover.jpg';
 import turathnaImg from '@/assets/images/turathna/Screenshot 2026-02-12 140630.png';
 import ctaImg from '@/assets/images/bg/cta.png';
 
@@ -153,6 +154,11 @@ export default {
                     id: 'herd-tracker',
                     image: herdTrackerImg,
                     name: t('portfolio.projectDetails.herdTracker.name'),
+                },
+                {
+                    id: 'kivo',
+                    image: kivoImg,
+                    name: t('portfolio.projectDetails.kivo.name'),
                 },
                 {
                     id: 'wavelink',

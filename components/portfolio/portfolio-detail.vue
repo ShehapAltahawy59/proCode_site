@@ -227,6 +227,16 @@ import herdTrackerImg5 from '@/assets/images/elan3am/elan3am-5.jpg';
 
 const herdTrackerImages = [herdTrackerImg0, herdTrackerImg1, herdTrackerImg2, herdTrackerImg3, herdTrackerImg4, herdTrackerImg5];
 
+import kivoImg0 from '@/assets/images/kivo-app/kivo-cover.jpg';
+import kivoImg1 from '@/assets/images/kivo-app/kivo-1.jpg';
+import kivoImg2 from '@/assets/images/kivo-app/kivo-2.jpg';
+import kivoImg3 from '@/assets/images/kivo-app/kivo-3.jpg';
+import kivoImg4 from '@/assets/images/kivo-app/kivo-4.jpg';
+import kivoImg5 from '@/assets/images/kivo-app/kivo-5.jpg';
+import kivoImg6 from '@/assets/images/kivo-app/kivo-6.jpg';
+
+const kivoImages = [kivoImg0, kivoImg1, kivoImg2, kivoImg3, kivoImg4, kivoImg5, kivoImg6];
+
 // WaveLink images — drop any .jpg/.jpeg/.png/.webp into assets/images/wavelink/ and they appear automatically
 const wavelinkImageModules = import.meta.glob('../../assets/images/wavelink/*.{jpg,jpeg,png,webp}', { eager: true, import: 'default' });
 const wavelinkImages = Object.keys(wavelinkImageModules).sort().map((key) => wavelinkImageModules[key]);
@@ -456,6 +466,19 @@ export default {
                     outcome: t('portfolio.projectDetails.herdTracker.outcome'),
                     url: t('portfolio.projectDetails.herdTracker.url'),
                     images: herdTrackerImages
+                }
+            }
+            if (projectId.value === 'kivo') {
+                return {
+                    name: t('portfolio.projectDetails.kivo.name'),
+                    location: t('portfolio.projectDetails.kivo.location'),
+                    status: t('portfolio.projectDetails.kivo.status'),
+                    challenge: t('portfolio.projectDetails.kivo.challenge'),
+                    solution: t('portfolio.projectDetails.kivo.solution'),
+                    features: t('portfolio.projectDetails.kivo.features'),
+                    outcome: t('portfolio.projectDetails.kivo.outcome'),
+                    url: t('portfolio.projectDetails.kivo.url'),
+                    images: kivoImages
                 }
             }
             if (projectId.value === 'wavelink') {
