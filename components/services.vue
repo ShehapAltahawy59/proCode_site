@@ -36,72 +36,6 @@
                 </div>
             </div><!--end grid-->
         </div><!--end container-->
-
-
-        <div class="container md:mt-24 mt-16">
-            <div class="grid grid-cols-1 pb-8 text-center">
-                <h6 class="text-blue-800 text-base font-medium uppercase mb-2">{{ t('services.workProcess') }}</h6>
-                <h3 class="mb-4 md:text-2xl text-xl font-medium dark:text-white">{{ t('services.digitalSystem') }}
-                </h3>
-
-                <p class="text-slate-400 dark:text-slate-300 max-w-xl mx-auto">{{ t('services.digitalSystemDesc') }}</p>
-            </div><!--end grid-->
-
-            <div class="grid grid-cols-1 mt-8">
-                <div v-for="item in items" :key="item.id" class="timeline relative">
-                    <div class="timeline-item">
-                        <div v-if="item.id === 'aiAnalysis'" class="grid sm:grid-cols-2">
-                            <div>
-                                <div class="duration date-label-left ltr:float-right rtl:float-left md:me-7 relative">
-                                    <img :src="item.image" class="size-64" alt="">
-                                </div>
-                            </div><!--end col-->
-                            <div class="mt-4 md:mt-0">
-                                <div
-                                    class="event event-description-right ltr:float-left rtl:float-right ltr:text-left rtl:text-right md:ms-7">
-                                    <h5 class="text-lg dark:text-white mb-1 font-medium">{{ item.name }}</h5>
-                                    <p class="timeline-subtitle mt-3 mb-0 text-slate-400">{{ item.desc }}</p>
-                                </div>
-                            </div><!--end col-->
-                        </div><!--end grid-->
-                    </div><!--end timeline item-->
-
-                    <div class="timeline-item pt-4">
-                        <div v-if="item.id === 'cloudDashboards'" class="grid sm:grid-cols-2">
-                            <div class="md:order-1 order-2">
-                                <div
-                                    class="event event-description-left ltr:float-left rtl:float-right ltr:text-right rtl:text-left md:me-7">
-                                    <h5 class="text-lg dark:text-white mb-1 font-medium">{{ item.name }}</h5>
-                                    <p class="timeline-subtitle mt-3 mb-0 text-slate-400">{{ item.desc }}</p>
-                                </div>
-                            </div><!--end col-->
-                            <div class="md:order-2 order-1">
-                                <div class="duration duration-right md:ms-7 relative">
-                                    <img :src="item.image" class="size-64" alt="">
-                                </div>
-                            </div><!--end col-->
-                        </div><!--end grid-->
-                    </div><!--end timeline item-->
-
-                    <div class="timeline-item  pt-4">
-                        <div v-if="item.id === 'paymentGateways'" class="grid sm:grid-cols-2">
-                            <div class="mt-4 mt-sm-0">
-                                <div class="duration date-label-left ltr:float-right rtl:float-left md:me-7 relative">
-                                    <img :src="item.image" class="size-64" alt="">
-                                </div>
-                            </div><!--end col-->
-                            <div class="mt-4 mt-sm-0">
-                                <div
-                                    class="event event-description-right ltr:float-left rtl:float-right ltr:text-left rtl:text-right md:ms-7">
-                                    <h5 class="text-lg dark:text-white mb-1 font-medium">{{ item.name }}</h5>
-                                    <p class="timeline-subtitle mt-3 mb-0 text-slate-400">{{ item.desc }}</p>
-                                </div>
-                            </div><!--end col-->
-                        </div><!--end grid-->
-                    </div><!--end timeline item-->
-                </div>
-            </div>
-        </div><!--end container-->
     </section><!--end section-->
     <!-- End -->
 
@@ -149,9 +83,6 @@
 
 <script setup>
 import { useLanguage } from '~/composables/useLanguage'
-import image from '@/assets/images/svg/design-thinking.svg';
-import image2 from '@/assets/images/svg/coding.svg';
-import image3 from '@/assets/images/svg/office-desk.svg';
 import { computed, ref } from 'vue'
 import VueEasyLightbox from 'vue-easy-lightbox'
 
@@ -352,30 +283,6 @@ const datas = computed(() => {
             desc: t('services.ecommercePayments.desc'),
             class: 'features p-6 shadow-xl shadow-slate-100 dark:shadow-slate-800 transition duration-500 rounded-3xl mt-8'
         },
-    ]
-})
-
-const items = computed(() => {
-    const lang = currentLang.value
-    return [
-        {
-            id: 'aiAnalysis',
-            image: image,
-            name: t('services.aiAnalysis.name'),
-            desc: t('services.aiAnalysis.desc')
-        },
-        {
-            id: 'cloudDashboards',
-            image: image2,
-            name: t('services.cloudDashboards.name'),
-            desc: t('services.cloudDashboards.desc')
-        },
-        {
-            id: 'paymentGateways',
-            image: image3,
-            name: t('services.paymentGateways.name'),
-            desc: t('services.paymentGateways.desc')
-        }
     ]
 })
 

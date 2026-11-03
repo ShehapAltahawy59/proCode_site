@@ -9,6 +9,7 @@ const translations = {
   en: {
     nav: {
       home: 'Company',
+      products: 'Our Products',
       about: 'About us',
       services: 'Services',
       portfolio: 'Projects',
@@ -124,7 +125,8 @@ const translations = {
         'Stripe & iOS Payment Integration modules',
         'Customized LLM Analysis Tools',
         'QVStyle - Fashion E-commerce Platform',
-        'Turathna - Retail & Inventory System'
+        'Turathna - Retail & Inventory System',
+        'Herd Tracker - Livestock & Farm Management App'
       ],
       projectDetails: {
         projectDetail: 'Project Detail',
@@ -288,8 +290,75 @@ const translations = {
           techStack: ['.NET', 'Vue.js'],
           outcome: 'Turathna is live, helping retail businesses modernize daily sales and operations with real-time accuracy.',
           url: 'https://turathunas.com/'
+        },
+        herdTracker: {
+          name: 'Herd Tracker (متابعة القطيع)',
+          location: 'Mobile Application (Android)',
+          status: 'live',
+          challenge: 'Livestock farmers keep animal records, purchases and farm accounts on paper or in scattered notebooks, so it is hard to follow the history of each animal or to know how the farm is really doing financially.',
+          solution: 'ProCode built Herd Tracker, a bilingual Arabic/English mobile app where farm owners register every animal bought or born on the farm, keep a full record for each one, and follow expenses, income and milk sales in one place, with separate accounts for farmers, veterinarians, sellers and buyers.',
+          features: [
+            'Record animals bought or born on the farm: cattle, sheep, goats and horses',
+            'A full record for each animal: ID number, breed, name, birth date, age, sex and parents, with photos and documents',
+            'Purchase details: seller, date, price, weight, number of animals and production purpose',
+            'Farm expenses, income and milk sales, with an account summary',
+            'Reports on purchased, sold and newborn animals',
+            'Account types for farmers, veterinarians, sellers and buyers',
+            'Full Arabic and English support'
+          ],
+          outcome: 'Farm owners keep their herd records and farm accounts together in one app, making daily follow-up easier and the data of every animal a tap away.',
+          url: 'https://play.google.com/store/apps/details?id=com.procode.elan3am'
+        },
+        wavelink: {
+          name: 'WaveLink',
+          location: 'Web Application & WhatsApp',
+          status: 'live',
+          challenge: 'Businesses struggle to answer customer questions on WhatsApp instantly and consistently, tying up staff with repetitive queries around the clock.',
+          solution: 'ProCode built WaveLink, an AI-powered WhatsApp assistant that answers customers automatically from a custom knowledge base. Teams upload their own documents (PDFs and files), and the assistant replies accurately in real time, all managed from an admin dashboard.',
+          features: [
+            'AI assistant that replies to customers on WhatsApp automatically',
+            'Custom knowledge base built from uploaded PDFs and documents',
+            'Admin dashboard to manage conversations and content',
+            'Accurate, context-aware answers grounded in your own data',
+            'Seamless WhatsApp integration for instant, 24/7 responses',
+            'Secure, scalable FastAPI backend'
+          ],
+          techStack: ['FastAPI', 'Vue.js', 'WhatsApp API', 'AI / RAG'],
+          outcome: 'WaveLink is live, helping businesses deliver instant, around-the-clock customer support on WhatsApp while reducing manual workload.',
+          url: 'https://wavelink.procode-solutions.com/'
         }
       }
+    },
+    products: {
+      subtitle: 'Our Products',
+      title: 'Ready-made systems you can start using now',
+      description: 'Besides building custom software, we make and run our own products for shops, restaurants and businesses.',
+      items: [
+        {
+          key: 'storix',
+          name: 'Storix',
+          tag: 'For shops and chains',
+          description: 'A complete system for your shop and all its branches, delivered under your own name and brand.',
+          features: ['A POS (cashier) in every branch', 'Stock in every branch, and transfers between them', 'Your own online store, with orders and delivery'],
+          button: 'Discover Storix'
+        },
+        {
+          key: 'wavelink',
+          name: 'Wavelink',
+          tag: 'For businesses that sell on WhatsApp',
+          description: 'An AI assistant that answers your customers on WhatsApp day and night, trained on your business. Plus an API for developers.',
+          features: ['Answers your customers 24/7', 'You can step in and take over any chat', 'An API to send messages and login codes from your own system'],
+          button: 'Start free'
+        },
+        {
+          key: 'restora',
+          name: 'Restora',
+          tag: 'For restaurants and cafes',
+          description: 'A website for your restaurant and a system that runs its orders: customers order online and every order reaches you.',
+          features: ["A website in your restaurant's name", 'Dine-in, delivery and takeaway orders on one screen', 'Orders can also go to your WhatsApp'],
+          button: 'Try it free for 14 days'
+        }
+      ]
     },
     buttons: {
       getStarted: 'Get Started',
@@ -341,6 +410,7 @@ const translations = {
   ar: {
     nav: {
       home: 'الشركة',
+      products: 'منتجاتنا',
       about: 'من نحن',
       services: 'الخدمات',
       portfolio: 'المشاريع',
@@ -456,7 +526,8 @@ const translations = {
         'وحدات تكامل Stripe و iOS للدفع',
         'أدوات تحليل LLM مخصصة',
         'QVStyle - منصة تجارة إلكترونية للأزياء',
-        'Turathna - نظام إدارة التجزئة والمخزون'
+        'Turathna - نظام إدارة التجزئة والمخزون',
+        'متابعة القطيع - تطبيق إدارة الماشية والمزرعة'
       ],
       projectDetails: {
         projectDetail: 'تفاصيل المشروع',
@@ -620,8 +691,75 @@ const translations = {
           techStack: ['.NET', 'Vue.js'],
           outcome: 'تراثنا متاح الآن، ويساعد الشركات التجارية على تحديث عمليات البيع اليومية بدقة فورية.',
           url: 'https://turathunas.com/'
+        },
+        herdTracker: {
+          name: 'متابعة القطيع (Herd Tracker)',
+          location: 'تطبيق موبايل (أندرويد)',
+          status: 'live',
+          challenge: 'أصحاب المزارع ومربو الماشية يسجلون بيانات الحيوانات والمشتريات وحسابات المزرعة في الورق أو في دفاتر متفرقة، فيصعب متابعة تاريخ كل حيوان أو معرفة الوضع المالي الحقيقي للمزرعة.',
+          solution: 'بنت ProCode تطبيق متابعة القطيع، تطبيق موبايل بالعربية والإنجليزية يسجّل فيه صاحب المزرعة كل حيوان يشتريه أو يولد في المزرعة، ويحتفظ بسجل كامل لكل حيوان، ويتابع المصروفات والإيرادات ومبيعات الحليب من مكان واحد، مع حسابات منفصلة للمزارع والطبيب البيطري والبائع والمشتري.',
+          features: [
+            'تسجيل الحيوانات المشتراة أو المولودة في المزرعة: أبقار وأغنام وماعز وخيل',
+            'سجل كامل لكل حيوان: رقم التعريف والسلالة والاسم وتاريخ الميلاد والعمر والجنس والأب والأم، مع الصور والمستندات',
+            'بيانات الشراء: البائع والتاريخ والسعر والوزن وعدد الحيوانات والهدف الإنتاجي',
+            'مصروفات وإيرادات المزرعة ومبيعات الحليب، مع ملخص للحسابات',
+            'تقارير الحيوانات المشتراة والمباعة والمولودة',
+            'أنواع حسابات للمزارع والطبيب البيطري والبائع والمشتري',
+            'دعم كامل للعربية والإنجليزية'
+          ],
+          outcome: 'يجمع أصحاب المزارع سجلات القطيع وحسابات المزرعة في تطبيق واحد، فتسهل المتابعة اليومية وتصبح بيانات كل حيوان في متناول اليد.',
+          url: 'https://play.google.com/store/apps/details?id=com.procode.elan3am'
+        },
+        wavelink: {
+          name: 'ويف لينك',
+          location: 'تطبيق ويب وواتساب',
+          status: 'live',
+          challenge: 'تواجه الشركات صعوبة في الرد على استفسارات العملاء عبر واتساب بشكل فوري ومتسق، مما يستنزف وقت الموظفين في الأسئلة المتكررة على مدار الساعة.',
+          solution: 'بنت ProCode نظام ويف لينك، وهو مساعد ذكاء اصطناعي عبر واتساب يرد على العملاء تلقائيًا اعتمادًا على قاعدة معرفة مخصصة. ترفع الفرق مستنداتها الخاصة (ملفات PDF وملفات أخرى)، ويرد المساعد بدقة وفي الوقت الفعلي، مع إدارة كل ذلك من لوحة تحكم إدارية.',
+          features: [
+            'مساعد ذكاء اصطناعي يرد على العملاء عبر واتساب تلقائيًا',
+            'قاعدة معرفة مخصصة مبنية من ملفات PDF والمستندات المرفوعة',
+            'لوحة تحكم إدارية لإدارة المحادثات والمحتوى',
+            'إجابات دقيقة ومترابطة معتمدة على بياناتك الخاصة',
+            'تكامل سلس مع واتساب لردود فورية على مدار الساعة',
+            'نظام خلفي آمن وقابل للتوسع بـ FastAPI'
+          ],
+          techStack: ['FastAPI', 'Vue.js', 'واتساب API', 'ذكاء اصطناعي / RAG'],
+          outcome: 'ويف لينك متاح الآن، ويساعد الشركات على تقديم دعم فوري للعملاء عبر واتساب على مدار الساعة مع تقليل العمل اليدوي.',
+          url: 'https://wavelink.procode-solutions.com/'
         }
       }
+    },
+    products: {
+      subtitle: 'منتجاتنا',
+      title: 'أنظمة جاهزة تبدأ تستخدمها على طول',
+      description: 'غير البرمجة حسب الطلب، عندنا منتجات جاهزة بنعملها ونشغّلها بنفسنا للمحلات والمطاعم والشركات.',
+      items: [
+        {
+          key: 'storix',
+          name: 'Storix',
+          tag: 'للمحلات والفروع',
+          description: 'سيستم كامل لمحلك وكل فروعه، باسم محلك وبراندك.',
+          features: ['كاشير (POS) في كل فرع', 'مخزن كل فرع قدامك، والتحويل بين الفروع', 'متجر أونلاين باسم محلك، بالطلبات والتوصيل'],
+          button: 'اعرف أكتر عن Storix'
+        },
+        {
+          key: 'wavelink',
+          name: 'Wavelink',
+          tag: 'للي بيبيع على واتساب',
+          description: 'مساعد ذكي يرد على زباينك على واتساب ليل ونهار، متعلّم على شغلك. وكمان API للمطورين.',
+          features: ['يرد على زباينك 24 ساعة', 'تقدر تدخل وتكمّل أي محادثة بنفسك', 'API تبعت بيه رسائل وأكواد دخول من السيستم بتاعك'],
+          button: 'ابدأ مجاناً'
+        },
+        {
+          key: 'restora',
+          name: 'Restora',
+          tag: 'للمطاعم والكافيهات',
+          description: 'موقع لمطعمك وسيستم يدير طلباته: الزبون يطلب أونلاين والطلب يوصلك على طول.',
+          features: ['موقع باسم مطعمك', 'طلبات الصالة والدليفري والتيك أواي على شاشة واحدة', 'الطلبات توصلك على واتساب كمان'],
+          button: 'جرّب 14 يوم مجاناً'
+        }
+      ]
     },
     buttons: {
       getStarted: 'ابدأ الآن',

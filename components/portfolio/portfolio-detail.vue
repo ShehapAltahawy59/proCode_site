@@ -5,11 +5,14 @@
                 <div class="lg:col-span-5 md:col-span-6">
                     <div
                         class="grid grid-cols-1 gap-[30px] max-h-[calc(100vh-200px)] overflow-y-auto pr-2 custom-scrollbar">
-                        <div v-for="(img, index) in projectImages" :key="index"
-                            class="relative group cursor-pointer overflow-hidden rounded-md">
-                            <img :src="img" class="w-full rounded-md group-hover:scale-110 transition duration-500"
-                                :alt="`${projectName} - Image ${index + 1}`" @click="openImageLightbox(index)">
-                        </div>
+                        <!-- Client-only: the page is prerendered without ?id, so server-rendered images would belong to the default project -->
+                        <ClientOnly>
+                            <div v-for="(img, index) in projectImages" :key="`${projectId}-${index}`"
+                                class="relative group cursor-pointer overflow-hidden rounded-md">
+                                <img :src="img" class="w-full rounded-md group-hover:scale-110 transition duration-500"
+                                    :alt="`${projectName} - Image ${index + 1}`" @click="openImageLightbox(index)">
+                            </div>
+                        </ClientOnly>
                     </div><!--end grid-->
                 </div><!--end col-->
 
@@ -214,6 +217,19 @@ const turathnaImages = [
     turathnaImg1, turathnaImg2, turathnaImg3, turathnaImg4, turathnaImg5,
     turathnaImg6, turathnaImg7, turathnaImg8, turathnaImg9, turathnaImg10
 ];
+
+import herdTrackerImg0 from '@/assets/images/elan3am/elan3am-cover.jpg';
+import herdTrackerImg1 from '@/assets/images/elan3am/elan3am-1.jpg';
+import herdTrackerImg2 from '@/assets/images/elan3am/elan3am-2.jpg';
+import herdTrackerImg3 from '@/assets/images/elan3am/elan3am-3.jpg';
+import herdTrackerImg4 from '@/assets/images/elan3am/elan3am-4.jpg';
+import herdTrackerImg5 from '@/assets/images/elan3am/elan3am-5.jpg';
+
+const herdTrackerImages = [herdTrackerImg0, herdTrackerImg1, herdTrackerImg2, herdTrackerImg3, herdTrackerImg4, herdTrackerImg5];
+
+// WaveLink images — drop any .jpg/.jpeg/.png/.webp into assets/images/wavelink/ and they appear automatically
+const wavelinkImageModules = import.meta.glob('../../assets/images/wavelink/*.{jpg,jpeg,png,webp}', { eager: true, import: 'default' });
+const wavelinkImages = Object.keys(wavelinkImageModules).sort().map((key) => wavelinkImageModules[key]);
 
 // Import Mostakbal Masr images
 // import mostakbalImg1 from '@/assets/images/mostakbal masr/Screenshot 2025-12-09 155820.png'
@@ -429,6 +445,33 @@ export default {
                     images: turathnaImages
                 }
             }
+            if (projectId.value === 'herd-tracker') {
+                return {
+                    name: t('portfolio.projectDetails.herdTracker.name'),
+                    location: t('portfolio.projectDetails.herdTracker.location'),
+                    status: t('portfolio.projectDetails.herdTracker.status'),
+                    challenge: t('portfolio.projectDetails.herdTracker.challenge'),
+                    solution: t('portfolio.projectDetails.herdTracker.solution'),
+                    features: t('portfolio.projectDetails.herdTracker.features'),
+                    outcome: t('portfolio.projectDetails.herdTracker.outcome'),
+                    url: t('portfolio.projectDetails.herdTracker.url'),
+                    images: herdTrackerImages
+                }
+            }
+            if (projectId.value === 'wavelink') {
+                return {
+                    name: t('portfolio.projectDetails.wavelink.name'),
+                    location: t('portfolio.projectDetails.wavelink.location'),
+                    status: t('portfolio.projectDetails.wavelink.status'),
+                    challenge: t('portfolio.projectDetails.wavelink.challenge'),
+                    solution: t('portfolio.projectDetails.wavelink.solution'),
+                    features: t('portfolio.projectDetails.wavelink.features'),
+                    techStack: t('portfolio.projectDetails.wavelink.techStack'),
+                    outcome: t('portfolio.projectDetails.wavelink.outcome'),
+                    url: t('portfolio.projectDetails.wavelink.url'),
+                    images: wavelinkImages
+                }
+            }
             return null
         })
 
@@ -464,6 +507,7 @@ export default {
 
         return {
             t,
+            projectId,
             projectName,
             projectLocation,
             projectStatus,

@@ -38,7 +38,7 @@ import { useLanguage } from '~/composables/useLanguage'
 const { t } = useLanguage()
 
 const MOSTAQL_URL = 'https://mostaql.com/u/Shehap_Altahawy/reviews'
-const FACEBOOK_URL = 'https://www.facebook.com/profile.php?id=61579639703417'
+const FACEBOOK_URL = 'https://www.facebook.com/share/p/1ELgmuiKKW/'
 
 const reviews = [
     { image: mostaqlImg1, source: 'Mostaql', link: MOSTAQL_URL },

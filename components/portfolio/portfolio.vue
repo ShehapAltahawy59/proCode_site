@@ -75,8 +75,14 @@ import lmenusImg from '@/assets/images/Lmenus/photo_2026-02-12_12-05-38.jpg';
 import nutriFitImg from '@/assets/images/nutrifit/photo_2026-02-12_12-05-29.jpg';
 import myClinicSystemImg from '@/assets/images/3yadty/photo_2026-02-12_12-05-25.jpg';
 import qvStyleImg from '@/assets/images/qvstyle/Screenshot 2026-02-12 134838.png';
+import herdTrackerImg from '@/assets/images/elan3am/elan3am-cover.jpg';
 import turathnaImg from '@/assets/images/turathna/Screenshot 2026-02-12 140630.png';
 import ctaImg from '@/assets/images/bg/cta.png';
+
+// WaveLink images — drop any .jpg/.jpeg/.png/.webp into assets/images/wavelink/ and they appear automatically
+const wavelinkImageModules = import.meta.glob('../../assets/images/wavelink/*.{jpg,jpeg,png,webp}', { eager: true, import: 'default' });
+const wavelinkImages = Object.keys(wavelinkImageModules).sort().map((key) => wavelinkImageModules[key]);
+const wavelinkImg = wavelinkImages[0];
 import VueEasyLightbox from 'vue-easy-lightbox';
 import { ref, computed } from 'vue'
 import { useLanguage } from '~/composables/useLanguage'
@@ -142,6 +148,16 @@ export default {
                     id: 'turathna',
                     image: turathnaImg,
                     name: t('portfolio.projectDetails.turathna.name'),
+                },
+                {
+                    id: 'herd-tracker',
+                    image: herdTrackerImg,
+                    name: t('portfolio.projectDetails.herdTracker.name'),
+                },
+                {
+                    id: 'wavelink',
+                    image: wavelinkImg,
+                    name: t('portfolio.projectDetails.wavelink.name'),
                 }
             ]
         })

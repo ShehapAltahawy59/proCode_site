@@ -34,6 +34,7 @@
     </div><!--end container-->
   </section><!--end section-->
   <!-- Hero End -->
+  <products />
   <about />
   <services ref="servicesRef" />
   <portfolio />
@@ -47,6 +48,7 @@
 <script setup>
 import { ref, onMounted, watch, onBeforeUnmount } from 'vue'
 import navBar from '@/components/navbar/navbar-light.vue';
+import products from '@/components/products.vue';
 import about from '@/components/about.vue';
 import services from '@/components/services.vue';
 import portfolio from '@/components/portfolio/portfolio.vue';

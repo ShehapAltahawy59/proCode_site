@@ -68,6 +68,9 @@
 
                         </ul>
                     </li>
+                    <li class="nav-item products">
+                        <a class="nav-link" href="#products" @click="closeMobileMenu">{{ t('nav.products') }}</a>
+                    </li>
                     <li class="nav-item about">
                         <a class="nav-link" href="#about" @click="closeMobileMenu">{{ t('nav.about') }}</a>
                     </li>
