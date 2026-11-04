@@ -214,7 +214,7 @@ const translations = {
           features: [
             'A website with the name, logo and colours of the restaurant, in 5 ready looks',
             'Dine-in, delivery and pickup orders in one place, with a sound alert for each new order',
-            'POS on paid plans: cashier, tables, kitchen screen, shifts with a Z report, and staff roles',
+            'POS on the Pro plan: cashier, tables, kitchen screen, shifts with a Z report, and staff roles',
             'Keeps selling offline at the cashier',
             'Delivery zones with a price per zone, and orders can also go to WhatsApp',
             'Sales reports, and printed bills and kitchen tickets',
@@ -378,7 +378,7 @@ const translations = {
           name: 'Gusto!',
           tag: 'For restaurants and cafes',
           description: 'A website for your restaurant and a full system to run it: customers order online, and your team works from the cashier and kitchen screens.',
-          features: ["A website in your restaurant's name, in 5 looks", 'Dine-in, delivery and pickup orders on one screen, with no commission', 'POS on paid plans: cashier, tables, kitchen screen and shifts'],
+          features: ["A website in your restaurant's name, in 5 looks", 'Dine-in, delivery and pickup orders on one screen, with no commission', 'POS on the Pro plan: cashier, tables, kitchen screen and shifts'],
           button: 'Try it free for 14 days'
         }
       ]
@@ -638,7 +638,7 @@ const translations = {
           features: [
             'موقع باسم المطعم ولوجوه وألوانه، بـ 5 أشكال جاهزة',
             'طلبات الصالة والدليفري والاستلام في مكان واحد، مع تنبيه بالصوت لكل طلب جديد',
-            'نظام كاشير في الباقات المدفوعة: كاشير وترابيزات وشاشة مطبخ وورديات بتقرير Z وصلاحيات للموظفين',
+            'نظام كاشير في باقة احترافي: كاشير وترابيزات وشاشة مطبخ وورديات بتقرير Z وصلاحيات للموظفين',
             'الكاشير يكمل البيع حتى من غير إنترنت',
             'مناطق توصيل بسعر لكل منطقة، والطلبات توصل على واتساب كمان',
             'تقارير مبيعات وطباعة الفاتورة وتذكرة المطبخ',
@@ -802,7 +802,7 @@ const translations = {
           name: 'Gusto!\u200E',
           tag: 'للمطاعم والكافيهات',
           description: 'موقع لمطعمك وسيستم كامل يديره: الزبون يطلب أونلاين، وفريقك يشتغل من شاشات الكاشير والمطبخ.',
-          features: ['موقع باسم مطعمك بـ 5 أشكال', 'طلبات الصالة والدليفري والاستلام على شاشة واحدة، من غير عمولة', 'كاشير في الباقات المدفوعة: كاشير وترابيزات وشاشة مطبخ وورديات'],
+          features: ['موقع باسم مطعمك بـ 5 أشكال', 'طلبات الصالة والدليفري والاستلام على شاشة واحدة، من غير عمولة', 'كاشير في باقة احترافي: كاشير وترابيزات وشاشة مطبخ وورديات'],
           button: 'جرّب 14 يوم مجاناً'
         }
       ]
