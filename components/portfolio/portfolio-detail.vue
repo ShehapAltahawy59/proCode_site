@@ -170,7 +170,14 @@ import VueEasyLightbox from 'vue-easy-lightbox'
 
 import myClinicSystemImg from '@/assets/images/3yadty/photo_2026-02-12_12-05-25.jpg';
 import nutriFitImg from '@/assets/images/nutrifit/photo_2026-02-12_12-05-29.jpg';
-import lmenusImg from '@/assets/images/Lmenus/photo_2026-02-12_12-05-38.jpg';
+import gustoImg0 from '@/assets/images/gusto/gusto-cover.webp';
+import gustoImg1 from '@/assets/images/gusto/gusto-1.webp';
+import gustoImg2 from '@/assets/images/gusto/gusto-2.webp';
+import gustoImg3 from '@/assets/images/gusto/gusto-3.webp';
+import gustoImg4 from '@/assets/images/gusto/gusto-4.webp';
+import gustoImg5 from '@/assets/images/gusto/gusto-5.webp';
+
+const gustoImages = [gustoImg0, gustoImg1, gustoImg2, gustoImg3, gustoImg4, gustoImg5];
 import madinatakImg1 from '@/assets/images/madinatak/madinatak-1.jpg';
 import madinatakImg2 from '@/assets/images/madinatak/madinatak-2.jpg';
 import madinatakImg3 from '@/assets/images/madinatak/madinatak-3.jpg';
@@ -339,7 +346,7 @@ export default {
         const lightboxIndex = ref(0)
 
         const projectId = computed(() => {
-            return route.query.id || 'dog-life-ai'
+            return route.query.id === 'lmenus' ? 'gusto' : (route.query.id || 'dog-life-ai')
         })
 
         const projectData = computed(() => {
@@ -387,17 +394,18 @@ export default {
                     images: [dogLifeAIImg]
                 }
             }
-            if (projectId.value === 'lmenus') {
+            if (projectId.value === 'gusto') {
                 return {
-                    name: t('portfolio.projectDetails.lmenus.name'),
-                    location: t('portfolio.projectDetails.lmenus.location'),
-                    status: t('portfolio.projectDetails.lmenus.status'),
-                    challenge: t('portfolio.projectDetails.lmenus.challenge'),
-                    solution: t('portfolio.projectDetails.lmenus.solution'),
-                    features: t('portfolio.projectDetails.lmenus.features'),
-                    techStack: t('portfolio.projectDetails.lmenus.techStack'),
-                    outcome: t('portfolio.projectDetails.lmenus.outcome'),
-                    images: [lmenusImg]
+                    name: t('portfolio.projectDetails.gusto.name'),
+                    location: t('portfolio.projectDetails.gusto.location'),
+                    status: t('portfolio.projectDetails.gusto.status'),
+                    challenge: t('portfolio.projectDetails.gusto.challenge'),
+                    solution: t('portfolio.projectDetails.gusto.solution'),
+                    features: t('portfolio.projectDetails.gusto.features'),
+                    techStack: t('portfolio.projectDetails.gusto.techStack'),
+                    outcome: t('portfolio.projectDetails.gusto.outcome'),
+                    url: t('portfolio.projectDetails.gusto.url'),
+                    images: gustoImages
                 }
             }
             if (projectId.value === 'nutri-fit') {

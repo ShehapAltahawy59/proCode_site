@@ -6,13 +6,13 @@
 
     <p>
       These terms apply to procode-solutions.com and to the services of ProCode Solutions (“ProCode”, “we”, “us”),
-      including Wavelink, Restora and Storix. By using our website or services you agree to them. A product may have
+      including Wavelink, Gusto! and Storix. By using our website or services you agree to them. A product may have
       its own terms or a written agreement with you; where it does, that applies to the product as well.
     </p>
 
     <h2>1. Our services</h2>
-    <p>We build and run software for businesses: Wavelink (an AI assistant and API for WhatsApp messaging), Restora
-      (websites and online ordering for restaurants) and Storix (point of sale, branches and online stores for shops).
+    <p>We build and run software for businesses: Wavelink (an AI assistant and API for WhatsApp messaging), Gusto!
+      (websites, point of sale and online ordering for restaurants) and Storix (point of sale, branches and online stores for shops).
       What each plan includes, its price, and any setup work are as shown on the product's pages or agreed with you
       in writing.</p>
 

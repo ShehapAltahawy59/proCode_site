@@ -71,7 +71,7 @@
 import madinatakImg from '@/assets/images/madinatak/madinatak-1.jpg';
 import taqrerkImg from '@/assets/images/taqrerk/taqrerk-1.png';
 import dogLifeAIImg from '@/assets/images/dog life/photo_2026-02-12_12-05-33.jpg';
-import lmenusImg from '@/assets/images/Lmenus/photo_2026-02-12_12-05-38.jpg';
+import gustoImg from '@/assets/images/gusto/gusto-cover.webp';
 import nutriFitImg from '@/assets/images/nutrifit/photo_2026-02-12_12-05-29.jpg';
 import myClinicSystemImg from '@/assets/images/3yadty/photo_2026-02-12_12-05-25.jpg';
 import qvStyleImg from '@/assets/images/qvstyle/Screenshot 2026-02-12 134838.png';
@@ -126,9 +126,9 @@ export default {
                     name: t('portfolio.projectDetails.dogLifeAI.name'),
                 },
                 {
-                    id: 'lmenus',
-                    image: lmenusImg,
-                    name: t('portfolio.projectDetails.lmenus.name'),
+                    id: 'gusto',
+                    image: gustoImg,
+                    name: t('portfolio.projectDetails.gusto.name'),
                 },
                 {
                     id: 'nutri-fit',

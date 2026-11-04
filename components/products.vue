@@ -42,19 +42,19 @@ import { computed } from 'vue'
 import { useLanguage } from '~/composables/useLanguage'
 import storixImg from '@/assets/images/products/storix.webp'
 import wavelinkImg from '@/assets/images/products/wavelink.png'
-import restoraImg from '@/assets/images/products/restora.webp'
+import gustoImg from '@/assets/images/products/gusto.webp'
 
 const { t, currentLang } = useLanguage()
 
 const items = computed(() => t('products.items'))
 
-const images = { storix: storixImg, wavelink: wavelinkImg, restora: restoraImg }
+const images = { storix: storixImg, wavelink: wavelinkImg, gusto: gustoImg }
 
 // Storix has its own landing page (pages/storix.vue), with the demo and WhatsApp buttons.
 const links = computed(() => ({
     storix: '/storix',
     wavelink: currentLang.value === 'ar' ? 'https://wavelink.procode-solutions.com/ar' : 'https://wavelink.procode-solutions.com/',
-    restora: 'https://madentak-ban-edak.web.app/restora'
+    gusto: 'https://madentak-ban-edak.web.app/gusto'
 }))
 </script>
 
@@ -88,7 +88,7 @@ const links = computed(() => ({
     }
 }
 
-.product-image--restora {
-    background: #fbf8f9;
+.product-image--gusto {
+    background: #f3f5f9;
 }
 </style>

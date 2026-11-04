@@ -65,7 +65,7 @@ const translations = {
         fullDescription: 'Building smart systems like Dog Life AI that use Large Language Models to analyze behavior and provide deep insights. We leverage cutting-edge AI technology to create intelligent solutions that understand context, learn from data, and provide actionable insights for businesses across various industries.'
       },
       digitalTransformation: {
-        name: 'Digital Transformation (LMENUS)',
+        name: 'Digital Transformation (Gusto!)',
         desc: 'Digitizing traditional businesses like restaurants with cloud-based ordering and management systems.',
         fullDescription: 'Digitizing traditional businesses like restaurants with cloud-based ordering and management systems. We transform legacy operations into modern, efficient digital ecosystems that streamline processes, reduce costs, and enhance customer experiences through innovative cloud-based solutions.'
       },
@@ -119,7 +119,7 @@ const translations = {
         'Madinatak - Multi-Vendor Delivery & Business Platform',
         'Taqrerk - AI Reports Platform for Samawah Tech',
         'Dog Life AI - Smart Pet Monitoring',
-        'LMENUS - Digital Menu Ecosystem',
+        'Gusto! - Restaurant Website, Ordering & POS System',
         'NutriFit - AI Personal Trainer',
         'My Clinic System - Healthcare Management',
         'Stripe & iOS Payment Integration modules',
@@ -161,7 +161,8 @@ const translations = {
             'AI-powered chatbot for customer support',
             'QR-code digital menus for restaurants',
             'Integrated payment gateway',
-            'AI-based menu extraction directly from PDF files'
+            'AI-based menu extraction directly from PDF files',
+            'A POS for each restaurant: cashier, tables, kitchen screen and shifts'
           ],
           techStack: ['Flutter', 'Vue.js', 'AI Chatbot', 'AI / LLM (PDF Menu Extraction)', 'Live GPS Tracking', 'Payment Gateway Integration'],
           outcome: 'Madinatak is ProCode\'s flagship production platform — a complete multi-app ecosystem connecting businesses, customers, and delivery drivers in one city-wide system.',
@@ -204,22 +205,25 @@ const translations = {
           outcome: 'Pet owners gain early warning signs for potential health issues and continuous peace of mind through AI-driven monitoring.',
           url: 'https://play.google.com/store/apps/details?id=com.procode.doglifeai&hl=en'
         },
-        lmenus: {
-          name: 'LMENUS',
-          location: 'Web & Mobile Application',
+        gusto: {
+          name: 'Gusto!',
+          location: 'Web Application (browser, any device)',
           status: 'live',
-          challenge: 'Restaurants relying on printed menus face high reprinting costs, no real-time price updates, and no online ordering channel.',
-          solution: 'ProCode developed a cloud-based digital menu and ordering ecosystem with a customer-facing app and a real-time management dashboard, deployed on a dedicated VPS.',
+          challenge: 'Restaurants and cafes juggle orders from the hall, the phone and delivery, while their menu and prices live on paper. They need their own online presence and one system to run the day, without paying commission on every order.',
+          solution: 'ProCode built Gusto!, a website in the name of the restaurant joined to a full operating system: customers order online or from their table, and the staff work from the cashier, tables and kitchen screens, all managed from an Arabic control panel.',
           features: [
-            'QR-code based digital menus',
-            'Real-time menu and price updates',
-            'Online ordering and order management',
-            'Multi-branch restaurant support',
-            'Customer-facing mobile experience',
-            'Order analytics and reporting'
+            'A website with the name, logo and colours of the restaurant, in 5 ready looks',
+            'Dine-in, delivery and pickup orders in one place, with a sound alert for each new order',
+            'POS on paid plans: cashier, tables, kitchen screen, shifts with a Z report, and staff roles',
+            'Keeps selling offline at the cashier',
+            'Delivery zones with a price per zone, and orders can also go to WhatsApp',
+            'Sales reports, and printed bills and kitchen tickets',
+            'AI menu upload: photograph the menu and the sections and items are ready',
+            'A fixed subscription with no commission on orders'
           ],
-          techStack: ['Python', 'PostgreSQL', 'VPS Deployment'],
-          outcome: 'Restaurant owners eliminated printing costs and gained live control over their menu, pricing, and orders.'
+          techStack: ['Vue.js', 'Firebase', 'Cloud Functions'],
+          outcome: 'Restaurant owners run the website, the orders and the cashier from one system under their own brand.',
+          url: 'https://madentak-ban-edak.web.app/gusto'
         },
         nutriFit: {
           name: 'NutriFit',
@@ -370,11 +374,11 @@ const translations = {
           button: 'Start free'
         },
         {
-          key: 'restora',
-          name: 'Restora',
+          key: 'gusto',
+          name: 'Gusto!',
           tag: 'For restaurants and cafes',
-          description: 'A website for your restaurant and a system that runs its orders: customers order online and every order reaches you.',
-          features: ["A website in your restaurant's name", 'Dine-in, delivery and takeaway orders on one screen', 'Orders can also go to your WhatsApp'],
+          description: 'A website for your restaurant and a full system to run it: customers order online, and your team works from the cashier and kitchen screens.',
+          features: ["A website in your restaurant's name, in 5 looks", 'Dine-in, delivery and pickup orders on one screen, with no commission', 'POS on paid plans: cashier, tables, kitchen screen and shifts'],
           button: 'Try it free for 14 days'
         }
       ]
@@ -485,7 +489,7 @@ const translations = {
         fullDescription: 'بناء أنظمة ذكية مثل Dog Life AI التي تستخدم نماذج اللغة الكبيرة لتحليل السلوك وتقديم رؤى عميقة. نستفيد من تكنولوجيا الذكاء الاصطناعي المتطورة لإنشاء حلول ذكية تفهم السياق وتتعلم من البيانات وتقدم رؤى قابلة للتنفيذ للشركات في مختلف الصناعات.'
       },
       digitalTransformation: {
-        name: 'التحول الرقمي (LMENUS)',
+        name: 'التحول الرقمي (Gusto!\u200E)',
         desc: 'رقمنة الأعمال التقليدية مثل المطاعم مع أنظمة الطلب والإدارة المستندة إلى السحابة.',
         fullDescription: 'رقمنة الأعمال التقليدية مثل المطاعم مع أنظمة الطلب والإدارة المستندة إلى السحابة. نحول العمليات القديمة إلى أنظمة رقمية حديثة وفعالة تبسط العمليات وتقلل التكاليف وتعزز تجارب العملاء من خلال حلول مبتكرة مستندة إلى السحابة.'
       },
@@ -539,7 +543,7 @@ const translations = {
         'مدينتك بين إيديك - منصة توصيل وإدارة محال متعددة',
         'تقريرك - منصة تقارير ذكية لشركة سماوة',
         'Dog Life AI - مراقبة الحيوانات الأليفة الذكية',
-        'LMENUS - نظام القوائم الرقمية',
+        'Gusto!\u200E - موقع وطلبات وكاشير للمطاعم',
         'NutriFit - مدرب شخصي بالذكاء الاصطناعي',
         'My Clinic System - إدارة الرعاية الصحية',
         'وحدات تكامل Stripe و iOS للدفع',
@@ -581,7 +585,8 @@ const translations = {
             'روبوت محادثة ذكي لدعم العملاء',
             'قوائم رقمية عبر رمز QR للمطاعم',
             'بوابة دفع متكاملة',
-            'نظام بالذكاء الاصطناعي لاستخراج القوائم من ملفات PDF'
+            'نظام بالذكاء الاصطناعي لاستخراج القوائم من ملفات PDF',
+            'نظام كاشير لكل مطعم: كاشير وترابيزات وشاشة مطبخ وورديات'
           ],
           techStack: ['Flutter', 'Vue.js', 'روبوت محادثة ذكي', 'ذكاء اصطناعي / LLM لاستخراج القوائم', 'تتبع مباشر بـ GPS', 'تكامل بوابات الدفع'],
           outcome: 'مدينتك بين إيديك هو المنتج الرائد لـ ProCode في مرحلة الإنتاج — نظام متكامل من عدة تطبيقات يربط المحال التجارية والعملاء وسائقي التوصيل في منظومة واحدة على مستوى المدينة.',
@@ -624,22 +629,25 @@ const translations = {
           outcome: 'يحصل أصحاب الحيوانات الأليفة على إنذار مبكر لأي مشاكل صحية محتملة وراحة بال مستمرة بفضل المراقبة الذكية.',
           url: 'https://play.google.com/store/apps/details?id=com.procode.doglifeai&hl=en'
         },
-        lmenus: {
-          name: 'LMENUS',
-          location: 'تطبيق ويب وموبايل',
+        gusto: {
+          name: 'Gusto!\u200E',
+          location: 'تطبيق ويب (من المتصفح على أي جهاز)',
           status: 'live',
-          challenge: 'تواجه المطاعم التي تعتمد على القوائم المطبوعة تكاليف إعادة طباعة مرتفعة، وعدم القدرة على تحديث الأسعار فورياً، وغياب قناة للطلب أونلاين.',
-          solution: 'طورت ProCode نظام قوائم وطلبات رقمي يعمل على السحابة، يضم تطبيقاً للعملاء ولوحة تحكم إدارية فورية، تم نشره على خادم VPS مخصص.',
+          challenge: 'المطاعم والكافيهات تتعامل مع طلبات الصالة والتليفون والدليفري في وقت واحد، والمنيو والأسعار على الورق. تحتاج إلى موقع باسمها ونظام واحد يدير اليوم كله، من غير عمولة على كل طلب.',
+          solution: 'بنت ProCode نظام Gusto!\u200E، موقع باسم المطعم مربوط بنظام تشغيل كامل: العميل يطلب أونلاين أو من ترابيزته، والفريق يشتغل من شاشات الكاشير والترابيزات والمطبخ، وكل ده من لوحة تحكم بالعربي.',
           features: [
-            'قوائم رقمية عبر رمز QR',
-            'تحديث القوائم والأسعار فورياً',
-            'إدارة الطلبات والطلب أونلاين',
-            'دعم الفروع المتعددة للمطاعم',
-            'تجربة استخدام سهلة للعملاء عبر الموبايل',
-            'تقارير وتحليلات للطلبات'
+            'موقع باسم المطعم ولوجوه وألوانه، بـ 5 أشكال جاهزة',
+            'طلبات الصالة والدليفري والاستلام في مكان واحد، مع تنبيه بالصوت لكل طلب جديد',
+            'نظام كاشير في الباقات المدفوعة: كاشير وترابيزات وشاشة مطبخ وورديات بتقرير Z وصلاحيات للموظفين',
+            'الكاشير يكمل البيع حتى من غير إنترنت',
+            'مناطق توصيل بسعر لكل منطقة، والطلبات توصل على واتساب كمان',
+            'تقارير مبيعات وطباعة الفاتورة وتذكرة المطبخ',
+            'رفع المنيو بالذكاء الاصطناعي: صوّر المنيو وتطلع الأقسام والأصناف جاهزة',
+            'اشتراك ثابت من غير أي عمولة على الطلبات'
           ],
-          techStack: ['Python', 'PostgreSQL', 'نشر على VPS'],
-          outcome: 'تخلص أصحاب المطاعم من تكاليف الطباعة وأصبح لديهم تحكم مباشر في القائمة والأسعار والطلبات.'
+          techStack: ['Vue.js', 'Firebase', 'Cloud Functions'],
+          outcome: 'صاحب المطعم يدير الموقع والطلبات والكاشير من نظام واحد وباسم مطعمه.',
+          url: 'https://madentak-ban-edak.web.app/gusto'
         },
         nutriFit: {
           name: 'NutriFit',
@@ -790,11 +798,11 @@ const translations = {
           button: 'ابدأ مجاناً'
         },
         {
-          key: 'restora',
-          name: 'Restora',
+          key: 'gusto',
+          name: 'Gusto!\u200E',
           tag: 'للمطاعم والكافيهات',
-          description: 'موقع لمطعمك وسيستم يدير طلباته: الزبون يطلب أونلاين والطلب يوصلك على طول.',
-          features: ['موقع باسم مطعمك', 'طلبات الصالة والدليفري والتيك أواي على شاشة واحدة', 'الطلبات توصلك على واتساب كمان'],
+          description: 'موقع لمطعمك وسيستم كامل يديره: الزبون يطلب أونلاين، وفريقك يشتغل من شاشات الكاشير والمطبخ.',
+          features: ['موقع باسم مطعمك بـ 5 أشكال', 'طلبات الصالة والدليفري والاستلام على شاشة واحدة، من غير عمولة', 'كاشير في الباقات المدفوعة: كاشير وترابيزات وشاشة مطبخ وورديات'],
           button: 'جرّب 14 يوم مجاناً'
         }
       ]

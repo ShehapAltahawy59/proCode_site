@@ -6,7 +6,7 @@
 
     <p>
       ProCode Solutions (“ProCode”, “we”, “us”) is a software company in Egypt. We build and run
-      <b>Wavelink</b> (an AI assistant and API for WhatsApp messaging), <b>Restora</b> (websites and online
+      <b>Wavelink</b> (an AI assistant and API for WhatsApp messaging), <b>Gusto!</b> (websites, point of sale and online
       ordering for restaurants) and <b>Storix</b> (point of sale, branches and online stores for shops), and we
       operate this website, procode-solutions.com. This policy explains what information we collect, how we use
       it, and the choices you have.
