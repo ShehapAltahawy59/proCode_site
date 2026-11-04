@@ -44,7 +44,7 @@ const { t } = useLanguage()
 const date = computed(() => new Date().getFullYear())
 
 // رقم الواتساب بالصيغة الدولية
-const whatsappNumber = '966573092631'
+const whatsappNumber = '201551939977'
 </script>
 
 <style lang="scss" scoped>

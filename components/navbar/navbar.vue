@@ -115,7 +115,7 @@ const sections = ref([])
 const navLi = ref([])
 const current = ref("")
 const sectionTop = ref(null)
-const whatsappNumber = '966573092631'
+const whatsappNumber = '201551939977'
 const showDropdown = ref(false)
 const showServicesDropdown = ref(false)
 

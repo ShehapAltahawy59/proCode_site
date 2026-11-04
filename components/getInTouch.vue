@@ -45,7 +45,7 @@
     
                                 <div class="flex-1 ms-6">
                                     <h5 class="text-lg dark:text-white mb-2 font-medium">{{ t('contact.phone') }}</h5>
-                                    <a href="tel:+966573092631" class="text-slate-400 block mb-2">+966 57 309 2631</a>
+                                    <a href="tel:+201551939977" class="text-slate-400 block mb-2" dir="ltr">+20 155 193 9977</a>
                                     <a :href="`https://wa.me/${whatsappNumber}`" target="_blank" class="inline-flex items-center text-blue-800 hover:text-blue-900">
                                         <i class="uil uil-whatsapp text-xl me-1"></i>
                                         <span>{{ t('contact.whatsapp') }}</span>
@@ -88,7 +88,7 @@ import { ref } from 'vue'
 import { useLanguage } from '~/composables/useLanguage'
 
 const { t } = useLanguage()
-const whatsappNumber = '966573092631'
+const whatsappNumber = '201551939977'
 
 const formData = ref({
     name: '',
