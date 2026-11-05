@@ -274,11 +274,11 @@ const COPY = {
     },
     pricing: {
       title: 'أسعار واضحة، بالفرع',
-      subline: 'تجهيز مرة واحدة، واشتراك شهري لكل فرع. كل الأسعار بالجنيه المصري.',
+      subline: 'اشتراك شهري لكل فرع، من غير مصاريف تجهيز. كل الأسعار بالجنيه المصري.',
       plans: [
-        { name: 'البداية', for: 'فرع واحد + متجر أونلاين', setup: '9,000 جنيه تجهيز', monthly: '1,500 جنيه في الشهر' },
-        { name: 'النمو', for: '2 أو 3 فروع + متجر أونلاين', setup: '12,000 جنيه تجهيز', monthly: '1,500 جنيه لأول فرع + 1,000 جنيه لكل فرع زيادة', example: 'يعني 3 فروع = 3,500 جنيه في الشهر' },
-        { name: 'السلسلة', for: '4 فروع أو أكتر + متجر أونلاين', setup: 'من 18,000 جنيه تجهيز، حسب عدد الفروع', monthly: '1,500 جنيه لأول فرع + 1,000 للفرع التاني والتالت + 800 جنيه لكل فرع من الرابع', example: 'يعني 6 فروع = 5,900 جنيه في الشهر' },
+        { name: 'البداية', for: 'فرع واحد + متجر أونلاين', setup: 'من غير مصاريف تجهيز', monthly: '1,500 جنيه في الشهر' },
+        { name: 'النمو', for: '2 أو 3 فروع + متجر أونلاين', setup: 'من غير مصاريف تجهيز', monthly: '1,500 جنيه لأول فرع + 1,000 جنيه لكل فرع زيادة', example: 'يعني 3 فروع = 3,500 جنيه في الشهر' },
+        { name: 'السلسلة', for: '4 فروع أو أكتر + متجر أونلاين', setup: 'من غير مصاريف تجهيز', monthly: '1,500 جنيه لأول فرع + 1,000 للفرع التاني والتالت + 800 جنيه لكل فرع من الرابع', example: 'يعني 6 فروع = 5,900 جنيه في الشهر' },
       ],
       includedTitle: 'في كل الباقات',
       included: ['الاستضافة', 'التحديثات', 'الدعم', 'التدريب', 'من غير عمولة على الطلبات', 'من غير حد لعدد الأجهزة أو الموظفين'],
@@ -290,7 +290,7 @@ const COPY = {
       title: 'أسئلة بتتسأل كتير',
       items: [
         { q: 'السيستم هيبقى باسمي أنا؟', a: 'أيوه. اسم محلك على المتجر ولوحة التحكم، ولينك باسم محلك. ولو عندك دومين، إنت بتشتريه وإحنا بنربطه.' },
-        { q: 'فيه عمولة على الطلبات؟', a: 'لأ. بتدفع التجهيز والاشتراك الشهري بس، وStorix مبياخدش أي عمولة على أوردراتك.' },
+        { q: 'فيه عمولة على الطلبات؟', a: 'لأ. بتدفع الاشتراك الشهري بس، وStorix مبياخدش أي عمولة على أوردراتك.' },
         { q: 'فيه حد لعدد الأجهزة أو الموظفين؟', a: 'لأ. شغّل أجهزة وموظفين براحتك في كل فرع، وكل موظف يشوف الشاشات اللي تخصه بس.' },
         { q: 'زبايني يقدروا يدفعوا بالكارت؟', a: 'أيوه. متجرك الأونلاين بيقبل الدفع بالكارت عن طريق Paymob.' },
         { q: 'المتجر بيبيع بالجنيه ولا بالدولار؟', a: 'إنت اللي تختار: جنيه مصري أو دولار، من الإعدادات.' },
@@ -375,11 +375,11 @@ const COPY = {
     },
     pricing: {
       title: 'Clear prices, per branch',
-      subline: 'A one-time setup, then a monthly fee for each branch. All prices in Egyptian pounds.',
+      subline: 'A monthly fee for each branch, with no setup fee. All prices in Egyptian pounds.',
       plans: [
-        { name: 'Start', for: 'One branch + online store', setup: 'EGP 9,000 setup', monthly: 'EGP 1,500 a month' },
-        { name: 'Growth', for: '2 or 3 branches + online store', setup: 'EGP 12,000 setup', monthly: 'EGP 1,500 for the first branch + EGP 1,000 for each extra branch', example: 'So 3 branches = EGP 3,500 a month' },
-        { name: 'Chain', for: '4 branches or more + online store', setup: 'From EGP 18,000 setup, depending on the number of branches', monthly: 'EGP 1,500 for the first branch + EGP 1,000 each for the second and third + EGP 800 for each branch from the fourth', example: 'So 6 branches = EGP 5,900 a month' },
+        { name: 'Start', for: 'One branch + online store', setup: 'No setup fee', monthly: 'EGP 1,500 a month' },
+        { name: 'Growth', for: '2 or 3 branches + online store', setup: 'No setup fee', monthly: 'EGP 1,500 for the first branch + EGP 1,000 for each extra branch', example: 'So 3 branches = EGP 3,500 a month' },
+        { name: 'Chain', for: '4 branches or more + online store', setup: 'No setup fee', monthly: 'EGP 1,500 for the first branch + EGP 1,000 each for the second and third + EGP 800 for each branch from the fourth', example: 'So 6 branches = EGP 5,900 a month' },
       ],
       includedTitle: 'In every plan',
       included: ['Hosting', 'Updates', 'Support', 'Training', 'No commission on orders', 'No limit on devices or staff'],
@@ -391,7 +391,7 @@ const COPY = {
       title: 'Questions we often get',
       items: [
         { q: 'Will the system be in my name?', a: 'Yes. Your shop\'s name on the store and the dashboard, and a link with your shop\'s name. If you have your own domain, you buy it and we connect it.' },
-        { q: 'Do you take a commission on orders?', a: 'No. You pay the setup and the monthly fee only. Storix takes no commission on your orders.' },
+        { q: 'Do you take a commission on orders?', a: 'No. You pay the monthly fee only. Storix takes no commission on your orders.' },
         { q: 'Is there a limit on devices or staff?', a: 'No. Use as many devices and staff as you like in every branch, and each person sees only the screens they need.' },
         { q: 'Can my customers pay by card?', a: 'Yes. Your online store takes card payments through Paymob.' },
         { q: 'Does the store sell in pounds or dollars?', a: 'Your choice: Egyptian pounds or US dollars, set in Settings.' },
