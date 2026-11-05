@@ -223,7 +223,7 @@ const translations = {
           ],
           techStack: ['Vue.js', 'Firebase', 'Cloud Functions'],
           outcome: 'Restaurant owners run the website, the orders and the cashier from one system under their own brand.',
-          url: 'https://madentak-ban-edak.web.app/gusto'
+          url: 'https://gusto.procode-solutions.com'
         },
         nutriFit: {
           name: 'NutriFit',
@@ -647,7 +647,7 @@ const translations = {
           ],
           techStack: ['Vue.js', 'Firebase', 'Cloud Functions'],
           outcome: 'صاحب المطعم يدير الموقع والطلبات والكاشير من نظام واحد وباسم مطعمه.',
-          url: 'https://madentak-ban-edak.web.app/gusto'
+          url: 'https://gusto.procode-solutions.com'
         },
         nutriFit: {
           name: 'NutriFit',

@@ -54,7 +54,7 @@ const images = { storix: storixImg, wavelink: wavelinkImg, gusto: gustoImg }
 const links = computed(() => ({
     storix: '/storix',
     wavelink: currentLang.value === 'ar' ? 'https://wavelink.procode-solutions.com/ar' : 'https://wavelink.procode-solutions.com/',
-    gusto: 'https://madentak-ban-edak.web.app/gusto'
+    gusto: 'https://gusto.procode-solutions.com'
 }))
 </script>
 
