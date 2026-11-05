@@ -34,8 +34,8 @@
         <h1 class="sx-hero-title">{{ c.hero.headline }}</h1>
         <p class="sx-hero-sub">{{ c.hero.subline }}</p>
         <div class="sx-hero-btns">
-          <a href="#demos" class="sx-btn sx-btn--light">{{ c.hero.ctaDemo }}</a>
-          <a :href="WA" target="_blank" rel="noopener" class="sx-btn sx-btn--ghost" @click="track('Contact')">{{ c.hero.ctaWa }}</a>
+          <a :href="WA" target="_blank" rel="noopener" class="sx-btn sx-btn--light" @click="track('Contact')">{{ c.hero.ctaWa }}</a>
+          <a href="#demos" class="sx-btn sx-btn--ghost">{{ c.hero.ctaDemo }}</a>
         </div>
         <ul class="sx-chips">
           <li v-for="chip in c.hero.chips" :key="chip">{{ chip }}</li>
@@ -172,8 +172,8 @@
         <h2 class="sx-h2">{{ c.final.headline }}</h2>
         <p class="sx-lead">{{ c.final.subline }}</p>
         <div class="sx-hero-btns sx-hero-btns--center">
-          <a href="#demos" class="sx-btn sx-btn--light">{{ c.hero.ctaDemo }}</a>
-          <a :href="WA" target="_blank" rel="noopener" class="sx-btn sx-btn--ghost" @click="track('Contact')">{{ c.hero.ctaWa }}</a>
+          <a :href="WA" target="_blank" rel="noopener" class="sx-btn sx-btn--light" @click="track('Contact')">{{ c.hero.ctaWa }}</a>
+          <a href="#demos" class="sx-btn sx-btn--ghost">{{ c.hero.ctaDemo }}</a>
         </div>
         <p class="sx-final-phone" dir="ltr">{{ c.final.phone }}</p>
       </div>
@@ -200,7 +200,7 @@ definePageMeta({ layout: false })
 const DEMO_BASE = 'storix.procode-solutions.com'
 const HERO_WIDE = '/storix-assets/storix-hero-wide.webp'
 const HERO_MOBILE = '/storix-assets/storix-hero-mobile.webp'
-const WA = 'https://wa.me/201551939977?text=' + encodeURIComponent('أهلاً، عايز أعرف أكتر عن Storix')
+const WA = 'https://wa.me/201551939977?text=' + encodeURIComponent('أهلاً، عايز أجرّب Storix على محلي 14 يوم مجاناً')
 const year = new Date().getFullYear()
 const lang = ref('ar')
 
@@ -214,8 +214,8 @@ const COPY = {
       headline: 'مخزن الفروع مش مظبوط؟ سيستم واحد باسمك.',
       subline: 'بدل الكشكول والواتساب والإنستجرام: كاشير في كل فرع، مخزن كل فرع قدامك، ومتجر أونلاين باسم محلك.',
       ctaDemo: 'جرّب الديمو بنفسك',
-      ctaWa: 'كلّمنا واتساب',
-      chips: ['جاهز باسمك في 3 أيام', 'من غير عمولة على الطلبات', 'الاستضافة والدعم جوه الاشتراك'],
+      ctaWa: 'ابدأ 14 يوم مجاناً',
+      chips: ['14 يوم مجاناً، من غير كارت', 'جاهز باسمك في 3 أيام', 'من غير عمولة على الطلبات', 'الاستضافة والدعم جوه الاشتراك'],
     },
     problem: {
       title: 'الكلام ده مألوف؟',
@@ -274,7 +274,7 @@ const COPY = {
     },
     pricing: {
       title: 'أسعار واضحة، بالفرع',
-      subline: 'اشتراك شهري لكل فرع، من غير مصاريف تجهيز. كل الأسعار بالجنيه المصري.',
+      subline: 'أول 14 يوم مجاناً، وبعدها اشتراك شهري لكل فرع من غير مصاريف تجهيز. كل الأسعار بالجنيه المصري.',
       plans: [
         { name: 'البداية', for: 'فرع واحد + متجر أونلاين', setup: 'من غير مصاريف تجهيز', monthly: '1,500 جنيه في الشهر' },
         { name: 'النمو', for: '2 أو 3 فروع + متجر أونلاين', setup: 'من غير مصاريف تجهيز', monthly: '1,500 جنيه لأول فرع + 1,000 جنيه لكل فرع زيادة', example: 'يعني 3 فروع = 3,500 جنيه في الشهر' },
@@ -284,12 +284,14 @@ const COPY = {
       included: ['الاستضافة', 'التحديثات', 'الدعم', 'التدريب', 'من غير عمولة على الطلبات', 'من غير حد لعدد الأجهزة أو الموظفين'],
       yearly: 'ادفع سنة مقدم: 12 شهر بتمن 10.',
       payment: 'تدفع الاشتراك بلينك دفع، أو إنستاباي، أو كاش.',
-      cta: 'اسألنا عن سعر محلك',
+      cta: 'ابدأ 14 يوم مجاناً',
     },
     faq: {
       title: 'أسئلة بتتسأل كتير',
       items: [
         { q: 'السيستم هيبقى باسمي أنا؟', a: 'أيوه. اسم محلك على المتجر ولوحة التحكم، ولينك باسم محلك. ولو عندك دومين، إنت بتشتريه وإحنا بنربطه.' },
+        { q: 'إزاي أجرّب 14 يوم مجاناً؟', a: 'ابعتلنا واتساب محلك بيبيع إيه وعندك كام فرع، وفريقنا يفتحلك نسخة باسم محلك. من غير كارت، ومفيش أي دفع قبل ما التجربة تخلص.' },
+        { q: 'إيه اللي بيحصل بعد الـ14 يوم؟', a: 'لو اشتركت تكمّل على طول. ولو ماشتركتش، التجربة بتقف لحد ما تشترك.' },
         { q: 'فيه عمولة على الطلبات؟', a: 'لأ. بتدفع الاشتراك الشهري بس، وStorix مبياخدش أي عمولة على أوردراتك.' },
         { q: 'فيه حد لعدد الأجهزة أو الموظفين؟', a: 'لأ. شغّل أجهزة وموظفين براحتك في كل فرع، وكل موظف يشوف الشاشات اللي تخصه بس.' },
         { q: 'زبايني يقدروا يدفعوا بالكارت؟', a: 'أيوه. متجرك الأونلاين بيقبل الدفع بالكارت عن طريق Paymob.' },
@@ -315,8 +317,8 @@ const COPY = {
       headline: 'Branch stock never adds up? One system, in your name.',
       subline: 'Instead of the notebook, WhatsApp and Instagram: a cashier in every branch, every branch\'s stock in front of you, and an online store in your shop\'s name.',
       ctaDemo: 'Try the demo yourself',
-      ctaWa: 'Message us on WhatsApp',
-      chips: ['Ready in your name in 3 days', 'No commission on orders', 'Hosting and support included'],
+      ctaWa: 'Start 14 days free',
+      chips: ['14 days free, no card', 'Ready in your name in 3 days', 'No commission on orders', 'Hosting and support included'],
     },
     problem: {
       title: 'Sound familiar?',
@@ -375,7 +377,7 @@ const COPY = {
     },
     pricing: {
       title: 'Clear prices, per branch',
-      subline: 'A monthly fee for each branch, with no setup fee. All prices in Egyptian pounds.',
+      subline: 'The first 14 days are free, then a monthly fee for each branch with no setup fee. All prices in Egyptian pounds.',
       plans: [
         { name: 'Start', for: 'One branch + online store', setup: 'No setup fee', monthly: 'EGP 1,500 a month' },
         { name: 'Growth', for: '2 or 3 branches + online store', setup: 'No setup fee', monthly: 'EGP 1,500 for the first branch + EGP 1,000 for each extra branch', example: 'So 3 branches = EGP 3,500 a month' },
@@ -385,12 +387,14 @@ const COPY = {
       included: ['Hosting', 'Updates', 'Support', 'Training', 'No commission on orders', 'No limit on devices or staff'],
       yearly: 'Pay for a year: 12 months for the price of 10.',
       payment: 'Pay your subscription by payment link, InstaPay or cash.',
-      cta: 'Ask us for your shop\'s price',
+      cta: 'Start 14 days free',
     },
     faq: {
       title: 'Questions we often get',
       items: [
         { q: 'Will the system be in my name?', a: 'Yes. Your shop\'s name on the store and the dashboard, and a link with your shop\'s name. If you have your own domain, you buy it and we connect it.' },
+        { q: 'How do I try it free for 14 days?', a: 'Message us on WhatsApp with what your shop sells and how many branches you have, and our team opens a copy in your shop\'s name. No card, and nothing to pay before the trial ends.' },
+        { q: 'What happens after the 14 days?', a: 'If you subscribe, you carry straight on. If not, the trial stops until you subscribe.' },
         { q: 'Do you take a commission on orders?', a: 'No. You pay the monthly fee only. Storix takes no commission on your orders.' },
         { q: 'Is there a limit on devices or staff?', a: 'No. Use as many devices and staff as you like in every branch, and each person sees only the screens they need.' },
         { q: 'Can my customers pay by card?', a: 'Yes. Your online store takes card payments through Paymob.' },
