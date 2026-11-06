@@ -276,9 +276,9 @@ const COPY = {
       title: 'أسعار واضحة، بالفرع',
       subline: 'أول 14 يوم مجاناً، وبعدها اشتراك شهري لكل فرع من غير مصاريف تجهيز. كل الأسعار بالجنيه المصري.',
       plans: [
-        { name: 'البداية', for: 'فرع واحد + متجر أونلاين', setup: 'من غير مصاريف تجهيز', monthly: '1,500 جنيه في الشهر' },
-        { name: 'النمو', for: '2 أو 3 فروع + متجر أونلاين', setup: 'من غير مصاريف تجهيز', monthly: '1,500 جنيه لأول فرع + 1,000 جنيه لكل فرع زيادة', example: 'يعني 3 فروع = 3,500 جنيه في الشهر' },
-        { name: 'السلسلة', for: '4 فروع أو أكتر + متجر أونلاين', setup: 'من غير مصاريف تجهيز', monthly: '1,500 جنيه لأول فرع + 1,000 للفرع التاني والتالت + 800 جنيه لكل فرع من الرابع', example: 'يعني 6 فروع = 5,900 جنيه في الشهر' },
+        { name: 'محل واحد', for: 'فرع واحد، من غير متجر أونلاين', setup: 'من غير مصاريف تجهيز', monthly: '699 جنيه في الشهر' },
+        { name: 'البداية', for: 'فرع واحد + متجر أونلاين', setup: 'من غير مصاريف تجهيز', monthly: '999 جنيه في الشهر' },
+        { name: 'الفروع', for: 'فرعين أو أكتر + متجر أونلاين', setup: 'من غير مصاريف تجهيز', monthly: '999 جنيه لأول فرع + 500 جنيه لكل فرع زيادة', example: 'يعني 3 فروع = 1,999 جنيه، و6 فروع = 3,499 جنيه في الشهر' },
       ],
       includedTitle: 'في كل الباقات',
       included: ['الاستضافة', 'التحديثات', 'الدعم', 'التدريب', 'من غير عمولة على الطلبات', 'من غير حد لعدد الأجهزة أو الموظفين'],
@@ -296,7 +296,7 @@ const COPY = {
         { q: 'فيه حد لعدد الأجهزة أو الموظفين؟', a: 'لأ. شغّل أجهزة وموظفين براحتك في كل فرع، وكل موظف يشوف الشاشات اللي تخصه بس.' },
         { q: 'زبايني يقدروا يدفعوا بالكارت؟', a: 'أيوه. متجرك الأونلاين بيقبل الدفع بالكارت عن طريق Paymob.' },
         { q: 'المتجر بيبيع بالجنيه ولا بالدولار؟', a: 'إنت اللي تختار: جنيه مصري أو دولار، من الإعدادات.' },
-        { q: 'لو فتحت فرع جديد بعدين؟', a: 'بنضيفه على نفس السيستم، ويتضاف اشتراك الفرع ده للشهري. ومن الفرع الرابع، الفرع بـ 800 جنيه في الشهر.' },
+        { q: 'لو فتحت فرع جديد بعدين؟', a: 'بنضيفه على نفس السيستم، ويتضاف 500 جنيه في الشهر للفرع الجديد.' },
       ],
     },
     final: {
@@ -379,9 +379,9 @@ const COPY = {
       title: 'Clear prices, per branch',
       subline: 'The first 14 days are free, then a monthly fee for each branch with no setup fee. All prices in Egyptian pounds.',
       plans: [
-        { name: 'Start', for: 'One branch + online store', setup: 'No setup fee', monthly: 'EGP 1,500 a month' },
-        { name: 'Growth', for: '2 or 3 branches + online store', setup: 'No setup fee', monthly: 'EGP 1,500 for the first branch + EGP 1,000 for each extra branch', example: 'So 3 branches = EGP 3,500 a month' },
-        { name: 'Chain', for: '4 branches or more + online store', setup: 'No setup fee', monthly: 'EGP 1,500 for the first branch + EGP 1,000 each for the second and third + EGP 800 for each branch from the fourth', example: 'So 6 branches = EGP 5,900 a month' },
+        { name: 'One shop', for: 'One branch, no online store', setup: 'No setup fee', monthly: 'EGP 699 a month' },
+        { name: 'Start', for: 'One branch + online store', setup: 'No setup fee', monthly: 'EGP 999 a month' },
+        { name: 'Branches', for: 'Two branches or more + online store', setup: 'No setup fee', monthly: 'EGP 999 for the first branch + EGP 500 for each extra branch', example: 'So 3 branches = EGP 1,999, and 6 branches = EGP 3,499 a month' },
       ],
       includedTitle: 'In every plan',
       included: ['Hosting', 'Updates', 'Support', 'Training', 'No commission on orders', 'No limit on devices or staff'],
@@ -399,7 +399,7 @@ const COPY = {
         { q: 'Is there a limit on devices or staff?', a: 'No. Use as many devices and staff as you like in every branch, and each person sees only the screens they need.' },
         { q: 'Can my customers pay by card?', a: 'Yes. Your online store takes card payments through Paymob.' },
         { q: 'Does the store sell in pounds or dollars?', a: 'Your choice: Egyptian pounds or US dollars, set in Settings.' },
-        { q: 'What if I open another branch later?', a: 'We add it to the same system, and that branch\'s fee is added to your monthly. From the fourth branch on, each branch is EGP 800 a month.' },
+        { q: 'What if I open another branch later?', a: 'We add it to the same system, and EGP 500 a month is added for the new branch.' },
       ],
     },
     final: {
